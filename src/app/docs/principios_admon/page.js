@@ -12,7 +12,7 @@ export default function DocsPrincipiosAdmon() {
                 <Link href="/docs/principios_admon">
                     <div className="flex flex-col justify-center gap-3 h-60 w-60 rounded-3xl border border-gray-200 shadow-lg p-5 m-5 hover:scale-105 transition-transform duration-300 ease-in-out">
                         <div className="border-8 rounded-full border-gray-500 w-[100px] mx-auto">
-                            <Image src="/docs_file.png" className="mx-auto border-8 rounded-full border-mainColor p-2" width={100} height={100} />
+                            <Image src="/docs_file.png" className="mx-auto border-8 rounded-full border-mainColor p-2" width={100} height={100} alt="doc" />
                         </div>
                         <h1 className="text-mainColor font-bold text-sm">Cartel informativo</h1>
                     </div>
@@ -20,7 +20,7 @@ export default function DocsPrincipiosAdmon() {
                 <Link href="/docs/principios_admon">
                     <div className="flex flex-col justify-center gap-3 h-60 w-60 rounded-3xl border border-gray-200 shadow-lg p-5 m-5 hover:scale-105 transition-transform duration-300 ease-in-out">
                         <div className="border-8 rounded-full border-gray-500 w-[100px] mx-auto">
-                            <Image src="/docs_file.png" className="mx-auto border-8 rounded-full border-mainColor p-2" width={100} height={100} />
+                            <Image src="/docs_file.png" className="mx-auto border-8 rounded-full border-mainColor p-2" width={100} height={100} alt="doc" />
                         </div>
                         <h1 className="text-mainColor font-bold text-sm">Cláusula informativa (formato estándar)</h1>
                     </div>
@@ -28,7 +28,7 @@ export default function DocsPrincipiosAdmon() {
                 <Link href="/docs/principios_admon">
                     <div className="flex flex-col justify-center gap-3 h-60 w-60 rounded-3xl border border-gray-200 shadow-lg p-5 m-5 hover:scale-105 transition-transform duration-300 ease-in-out">
                         <div className="border-8 rounded-full border-gray-500 w-[100px] mx-auto">
-                            <Image src="/docs_file.png" className="mx-auto border-8 rounded-full border-mainColor p-2" width={100} height={100} />
+                            <Image src="/docs_file.png" className="mx-auto border-8 rounded-full border-mainColor p-2" width={100} height={100} alt="doc" />
                         </div>
                         <h1 className="text-mainColor font-bold text-sm">Cláusula informativa básica (formato reducido)</h1>
                     </div>
@@ -36,7 +36,7 @@ export default function DocsPrincipiosAdmon() {
                 <Link href="/docs/principios_admon">
                     <div className="flex flex-col justify-center gap-3 h-60 w-60 rounded-3xl border border-gray-200 shadow-lg p-5 m-5 hover:scale-105 transition-transform duration-300 ease-in-out">
                         <div className="border-8 rounded-full border-gray-500 w-[100px] mx-auto">
-                            <Image src="/docs_file.png" className="mx-auto border-8 rounded-full border-mainColor p-2" width={100} height={100} />
+                            <Image src="/docs_file.png" className="mx-auto border-8 rounded-full border-mainColor p-2" width={100} height={100} alt="doc" />
                         </div>
                         <h1 className="text-mainColor font-bold text-sm">Cláusula informativa detallada (formato ampliado)</h1>
                     </div>
@@ -44,7 +44,7 @@ export default function DocsPrincipiosAdmon() {
                 <Link href="/docs/principios_admon">
                     <div className="flex flex-col justify-center gap-3 h-60 w-60 rounded-3xl border border-gray-200 shadow-lg p-5 m-5 hover:scale-105 transition-transform duration-300 ease-in-out">
                         <div className="border-8 rounded-full border-gray-500 w-[100px] mx-auto">
-                            <Image src="/docs_file.png" className="mx-auto border-8 rounded-full border-mainColor p-2" width={100} height={100} />
+                            <Image src="/docs_file.png" className="mx-auto border-8 rounded-full border-mainColor p-2" width={100} height={100} alt="doc" />
                         </div>
                         <h1 className="text-mainColor font-bold text-sm">Pie correo electrónico</h1>
                     </div>
@@ -52,7 +52,7 @@ export default function DocsPrincipiosAdmon() {
                 <Link href="/docs/principios_admon">
                     <div className="flex flex-col justify-center gap-3 h-60 w-60 rounded-3xl border border-gray-200 shadow-lg p-5 m-5 hover:scale-105 transition-transform duration-300 ease-in-out">
                         <div className="border-8 rounded-full border-gray-500 w-[100px] mx-auto">
-                            <Image src="/docs_file.png" className="mx-auto border-8 rounded-full border-mainColor p-2" width={100} height={100} />
+                            <Image src="/docs_file.png" className="mx-auto border-8 rounded-full border-mainColor p-2" width={100} height={100} alt="doc" />
                         </div>
                         <h1 className="text-mainColor font-bold text-sm">Cláusula contratos</h1>
                     </div>
@@ -60,7 +60,7 @@ export default function DocsPrincipiosAdmon() {
                 <Link href="/docs/principios_admon">
                     <div className="flex flex-col justify-center gap-3 h-60 w-60 rounded-3xl border border-gray-200 shadow-lg p-5 m-5 hover:scale-105 transition-transform duration-300 ease-in-out">
                         <div className="border-8 rounded-full border-gray-500 w-[100px] mx-auto">
-                            <Image src="/docs_file.png" className="mx-auto border-8 rounded-full border-mainColor p-2" width={100} height={100} />
+                            <Image src="/docs_file.png" className="mx-auto border-8 rounded-full border-mainColor p-2" width={100} height={100} alt="doc" />
                         </div>
                         <h1 className="text-mainColor font-bold text-sm">Cláusula para proveedores</h1>
                     </div>
@@ -68,7 +68,7 @@ export default function DocsPrincipiosAdmon() {
                 <Link href="/docs/principios_admon">
                     <div className="flex flex-col justify-center gap-3 h-60 w-60 rounded-3xl border border-gray-200 shadow-lg p-5 m-5 hover:scale-105 transition-transform duration-300 ease-in-out">
                         <div className="border-8 rounded-full border-gray-500 w-[100px] mx-auto">
-                            <Image src="/docs_file.png" className="mx-auto border-8 rounded-full border-mainColor p-2" width={100} height={100} />
+                            <Image src="/docs_file.png" className="mx-auto border-8 rounded-full border-mainColor p-2" width={100} height={100} alt="doc" />
                         </div>
                         <h1 className="text-mainColor font-bold text-sm">Pie de correo de comunicaciones comerciales</h1>
                     </div>
@@ -76,7 +76,7 @@ export default function DocsPrincipiosAdmon() {
                 <Link href="/docs/firmados_clausulas_clientes">
                     <div className="flex flex-col justify-center gap-3 h-60 w-60 rounded-3xl border border-gray-200 shadow-lg p-5 m-5 hover:scale-105 transition-transform duration-300 ease-in-out">
                         <div className="border-8 rounded-full border-gray-500 w-[100px] mx-auto">
-                            <Image src="/ndocs1_3_1_1.png" className="mx-auto border-8 rounded-full border-mainColor p-2" width={100} height={100} />
+                            <Image src="/ndocs1_3_1_1.png" className="mx-auto border-8 rounded-full border-mainColor p-2" width={100} height={100} alt="doc" />
                         </div>
                         <h1 className="text-mainColor font-bold text-sm">Archivo de documentos firmados</h1>
                     </div>

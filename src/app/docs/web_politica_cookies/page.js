@@ -18,7 +18,7 @@ export default function DocsWebPoliticaDeCookies() {
                 <Link href="/docs/web_politica_cookies">
                     <div className="flex flex-col justify-center gap-3 h-60 w-60 rounded-3xl border border-gray-200 shadow-lg p-5 m-5 hover:scale-105 transition-transform duration-300 ease-in-out">
                         <div className="border-8 rounded-full border-gray-500 w-[100px] mx-auto">
-                            <Image src="/docs_file.png" className="mx-auto border-8 rounded-full border-mainColor p-2" width={100} height={100} />
+                            <Image src="/docs_file.png" className="mx-auto border-8 rounded-full border-mainColor p-2" width={100} height={100} alt="doc" />
                         </div>
                         <h1 className="text-mainColor font-bold text-sm">Ventana información básica sobre cookies técnicas</h1>
                     </div>
@@ -26,7 +26,7 @@ export default function DocsWebPoliticaDeCookies() {
                 <Link href="/docs/web_politica_cookies">
                     <div className="flex flex-col justify-center gap-3 h-60 w-60 rounded-3xl border border-gray-200 shadow-lg p-5 m-5 hover:scale-105 transition-transform duration-300 ease-in-out">
                         <div className="border-8 rounded-full border-gray-500 w-[100px] mx-auto">
-                            <Image src="/docs_file.png" className="mx-auto border-8 rounded-full border-mainColor p-2" width={100} height={100} />
+                            <Image src="/docs_file.png" className="mx-auto border-8 rounded-full border-mainColor p-2" width={100} height={100} alt="doc" />
                         </div>
                         <h1 className="text-mainColor font-bold text-sm">Política de cookies técnicas</h1>
                     </div>
@@ -34,7 +34,7 @@ export default function DocsWebPoliticaDeCookies() {
                 <Link href="/docs/web_politica_cookies">
                     <div className="flex flex-col justify-center gap-3 h-60 w-60 rounded-3xl border border-gray-200 shadow-lg p-5 m-5 hover:scale-105 transition-transform duration-300 ease-in-out">
                         <div className="border-8 rounded-full border-gray-500 w-[100px] mx-auto">
-                            <Image src="/docs_file.png" className="mx-auto border-8 rounded-full border-mainColor p-2" width={100} height={100} />
+                            <Image src="/docs_file.png" className="mx-auto border-8 rounded-full border-mainColor p-2" width={100} height={100} alt="doc" />
                         </div>
                         <h1 className="text-mainColor font-bold text-sm">Ventana y cuadro de configuración de cookies</h1>
                     </div>
@@ -42,7 +42,7 @@ export default function DocsWebPoliticaDeCookies() {
                 <Link href="/docs/web_politica_cookies">
                     <div className="flex flex-col justify-center gap-3 h-60 w-60 rounded-3xl border border-gray-200 shadow-lg p-5 m-5 hover:scale-105 transition-transform duration-300 ease-in-out">
                         <div className="border-8 rounded-full border-gray-500 w-[100px] mx-auto">
-                            <Image src="/docs_file.png" className="mx-auto border-8 rounded-full border-mainColor p-2" width={100} height={100} />
+                            <Image src="/docs_file.png" className="mx-auto border-8 rounded-full border-mainColor p-2" width={100} height={100} alt="doc" />
                         </div>
                         <h1 className="text-mainColor font-bold text-sm">Política de cookies</h1>
                     </div>

@@ -11,6 +11,7 @@ const Footer = () => {
                   src="/logo-audidat-clientes.png"
                   width={150}
                   height={75}
+                  alt="Footer"
                />
             </div>
             <div className="flex items-center justify-center gap-4">

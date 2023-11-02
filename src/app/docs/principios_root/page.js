@@ -19,7 +19,7 @@ export default function DocsPrincipiosRoot() {
                 <Link href="/docs/principios_admon">
                     <div className="flex flex-col justify-center gap-3 h-60 w-60 rounded-3xl border border-gray-200 shadow-lg p-5 m-5 hover:scale-105 transition-transform duration-300 ease-in-out">
                         <div className="border-8 rounded-full border-gray-500 w-[100px] mx-auto">
-                            <Image src="/ndocs1_3_1.png" className="mx-auto border-8 rounded-full border-mainColor p-2" width={100} height={100} />
+                            <Image src="/ndocs1_3_1.png" className="mx-auto border-8 rounded-full border-mainColor p-2" width={100} height={100} alt="doc" />
                         </div>
                         <h1 className="text-mainColor font-bold text-sm">Área de administración</h1>
                     </div>
@@ -27,7 +27,7 @@ export default function DocsPrincipiosRoot() {
                 <Link href="/docs/principios_rrhh">
                     <div className="flex flex-col justify-center gap-3 h-60 w-60 rounded-3xl border border-gray-200 shadow-lg p-5 m-5 hover:scale-105 transition-transform duration-300 ease-in-out">
                         <div className="border-8 rounded-full border-gray-500 w-[100px] mx-auto">
-                            <Image src="/ndocs1_3_2.png" className="mx-auto border-8 rounded-full border-mainColor p-2" width={100} height={100} />
+                            <Image src="/ndocs1_3_2.png" className="mx-auto border-8 rounded-full border-mainColor p-2" width={100} height={100} alt="doc" />
                         </div>
                         <h1 className="text-mainColor font-bold text-sm">Área de recursos humanos</h1>
                     </div>
@@ -35,7 +35,7 @@ export default function DocsPrincipiosRoot() {
                 <Link href="/docs/principios_videovigilancia">
                     <div className="flex flex-col justify-center gap-3 h-60 w-60 rounded-3xl border border-gray-200 shadow-lg p-5 m-5 hover:scale-105 transition-transform duration-300 ease-in-out">
                         <div className="border-8 rounded-full border-gray-500 w-[100px] mx-auto">
-                            <Image src="/ndocs1_3_3.png" className="mx-auto border-8 rounded-full border-mainColor p-2" width={100} height={100} />
+                            <Image src="/ndocs1_3_3.png" className="mx-auto border-8 rounded-full border-mainColor p-2" width={100} height={100} alt="doc" />
                         </div>
                         <h1 className="text-mainColor font-bold text-sm">Videovigilancia</h1>
                     </div>
@@ -43,7 +43,7 @@ export default function DocsPrincipiosRoot() {
                 <Link href="/docs/clausulas_especificas">
                     <div className="flex flex-col justify-center gap-3 h-60 w-60 rounded-3xl border border-gray-200 shadow-lg p-5 m-5 hover:scale-105 transition-transform duration-300 ease-in-out">
                         <div className="border-8 rounded-full border-gray-500 w-[100px] mx-auto">
-                            <Image src="/ndocs1_3_4.png" className="mx-auto border-8 rounded-full border-mainColor p-2" width={100} height={100} />
+                            <Image src="/ndocs1_3_4.png" className="mx-auto border-8 rounded-full border-mainColor p-2" width={100} height={100} alt="doc" />
                         </div>
                         <h1 className="text-mainColor font-bold text-sm">Cláusulas específicas</h1>
                     </div>

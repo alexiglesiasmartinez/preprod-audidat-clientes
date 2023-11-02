@@ -4,7 +4,7 @@ export default function AvisoLegal() {
   return (
     <div className="pl-52 pr-52 py-7 flex flex-col gap-5 h-screen">
       <h1 className="text-2xl font-bold text-center">AVISO LEGAL</h1>
-      <Image src="/cumplimiento_normativo_360.png" className="mx-auto" width={150} height={150} />
+      <Image src="/cumplimiento_normativo_360.png" className="mx-auto" width={150} height={150} alt="doc" />
       <div className="flex flex-col gap-2 text-justify">
         <p>Información en cumplimiento de lo establecido en la Ley 34/2002, de 11 de julio, de servicios de la sociedad de la información y de comercio electrónico.</p>
         <p>En cumplimiento de lo establecido en el artículo 10 de la Ley 34/2002, de 11 de julio, de servicios de la sociedad de la información y de comercio electrónico, se informa de modo expreso, preciso e inequívoco, tanto a los destinatarios del servicio como a los órganos competentes, de los siguientes datos relativos al prestador de servicios de la sociedad de la información:</p>

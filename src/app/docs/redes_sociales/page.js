@@ -20,7 +20,7 @@ export default function DocsRedesSociales() {
                 <Link href="/docs/redes_sociales">
                     <div className="flex flex-col justify-center gap-3 h-60 w-60 rounded-3xl border border-gray-200 shadow-lg p-5 m-5 hover:scale-105 transition-transform duration-300 ease-in-out">
                         <div className="border-8 rounded-full border-gray-500 w-[100px] mx-auto">
-                            <Image src="/docs_file.png" className="mx-auto border-8 rounded-full border-mainColor p-2" width={100} height={100} />
+                            <Image src="/docs_file.png" className="mx-auto border-8 rounded-full border-mainColor p-2" width={100} height={100} alt="doc" />
                         </div>
                         <h1 className="text-mainColor font-bold text-sm">Guía de uso y buenas prácticas de las redes sociales</h1>
                     </div>

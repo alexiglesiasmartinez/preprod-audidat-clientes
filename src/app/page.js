@@ -4,7 +4,7 @@ export default function Home() {
   return (
     <div className="h-screen pl-52 pr-52 py-7 flex flex-col gap-5">
       <h1 className="text-2xl font-bold text-center">BIENVENIDO A AUDIDAT</h1>
-      <Image src="/cumplimiento_normativo_360.png" className="mx-auto" width={150} height={150} />
+      <Image src="/cumplimiento_normativo_360.png" className="mx-auto" width={150} height={150} alt="doc" />
       <div className="flex flex-col gap-2 text-justify">
         <p>Bienvenid@ a nuestra plataforma digital. Es un placer para AUDIDAT que hayas decidido acceder a este espacio virtual elaborado exclusivamente para ti, donde encontrarás todas las herramientas y recursos necesarios para gestionar un auténtico sistema de cumplimiento normativo integral.</p>
         <p>Queremos que tu experiencia con la plataforma digital sea lo más satisfactoria y útil posible, razón por la cual hemos generado una plataforma sencilla de utilizar, intuitiva, segura y confiable para que puedas disfrutar de una experiencia digital única.</p>

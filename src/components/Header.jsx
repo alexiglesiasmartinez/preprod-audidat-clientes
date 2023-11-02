@@ -12,6 +12,7 @@ const Header = () => {
                      src="/logo-audidat-clientes.png"
                      width={100}
                      height={50}
+                     alt="Header"
                   />
                </Link>
                <Link href="/" className="font-light">
