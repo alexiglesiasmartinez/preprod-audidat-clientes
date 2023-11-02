@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+   --mainGradient: rgba(2, 0, 36, 1);
+   --secondaryGradient: rgba(4, 30, 66, 1);
+}
+
+.gradientBackground {
+   background: linear-gradient(
+      90deg,
+      rgba(2, 0, 36, 1) 0%,
+      rgba(4, 30, 66, 1) 70%
+   );
+}
