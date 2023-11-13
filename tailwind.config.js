@@ -15,6 +15,9 @@ module.exports = {
       backgroundColor: {
         'mainGradient': 'var(--mainGradient)',
         'secondaryGradient': 'var(--secondaryGradient)',
+        'mainColor': 'var(--mainGradient)',
+        'mainColor2': 'var(--mainColor2)',
+        'mainColor3': 'var(--mainColor3)',
       },
       textColor: {
         'mainColor': 'var(--mainGradient)',

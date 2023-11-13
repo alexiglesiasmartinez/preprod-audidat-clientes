@@ -5,6 +5,8 @@
 :root {
    --mainGradient: rgba(2, 0, 36, 1);
    --secondaryGradient: rgba(4, 30, 66, 1);
+   --mainColor2: rgb(3 24 53);
+   --mainColor3: rgb(2, 15, 34);
 }
 
 .gradientBackground {
