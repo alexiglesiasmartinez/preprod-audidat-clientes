@@ -1,5 +1,4 @@
 import React from "react";
-import Image from "next/image";
 import Link from "next/link";
 import {
    MdDashboard,
@@ -88,7 +87,7 @@ const LeftBar = ({ children }) => {
 
             <span className="text-sm mt-1 mb-1">Protección de datos</span>
             <Link
-               href="/ndocs"
+               href="/tareas"
                className="font-light flex items-center justify-start flex-row gap-3 bg-mainColor2 w-full py-3 px-4 hover:bg-mainColor3 transition-colors duration-300 rounded-lg"
             >
                <MdOutlineAddTask />

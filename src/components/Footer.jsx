@@ -5,7 +5,7 @@ import Link from "next/link";
 const Footer = () => {
    return (
       <footer className="bg-secondaryGradient text-white text-center sticky z-10 p-5 shadow-2xl rounded-md">
-         <div className="grid grid-cols-3 justify-center align-middle h-full">
+         <div className="grid grid-cols-3 justify-center align-middle h-full pr-4">
             <div className="flex items-center gap-3">
                <Image
                   src="/logo-audidat-clientes.png"
