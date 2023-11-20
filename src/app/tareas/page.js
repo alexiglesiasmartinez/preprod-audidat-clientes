@@ -14,7 +14,7 @@ export default function Tareas() {
    return (
       <>
          <Header />
-         <div className="pl-52 pr-52 py-7 flex flex-col justify-start items-center gap-5 min-h-[83vh] h-auto">
+         <div className="pl-16 pr-16 py-7 flex flex-col justify-start items-center gap-5 min-h-[83vh] h-auto">
             <h1 className="text-2xl font-bold text-center">TAREAS</h1>
             <div>
                <div className='grid lg:grid-cols-2 grid-cols-1 gap-4 justify-center items-start mb-4 ml-4 mr-4 h-fit'>

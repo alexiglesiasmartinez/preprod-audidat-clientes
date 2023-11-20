@@ -6,7 +6,7 @@ import Footer from "@/components/Footer";
 export default function DocsWebPoliticaDePrivacidad() {
     return (
         <><Header />
-            <div className="pl-52 pr-52 py-7 flex flex-col justify-start items-center gap-5 min-h-[83vh] h-auto">
+            <div className="pl-16 pr-16 py-7 flex flex-col justify-start items-center gap-5 min-h-[83vh] h-auto">
                 <h1 className="text-2xl font-bold text-center">DOCUMENTACIÓN</h1>
                 <p><Link href="/ndocs" className="italic underline">Documentación</Link> / <Link href="/docs" className="italic underline">Protección de datos</Link> / <Link href="/docs/protocolo_pagina_web" className="italic underline">Protocolo página web y redes sociales</Link> / <Link href="/docs/web_politica_privacidad" className="italic underline">Política de privacidad</Link></p>
                 <h3 className="text-lg font-bold text-center">Política de privacidad</h3>
@@ -19,7 +19,7 @@ export default function DocsWebPoliticaDePrivacidad() {
                     <li className="text-justify">Remitir a la información adicional en un segundo nivel, donde se presentarán detalladamente el resto de las informaciones, en un medio más adecuado para su presentación, comprensión y, si se desea, archivo.</li>
                     <p className="text-justify">La presente Política de Privacidad se elabora siguiendo las citadas directrices.</p>
                 </div>
-                <div className="grid grid-cols-4 justify-center items-center text-center gap-0">
+                <div className="grid grid-cols-3 justify-center items-center text-center gap-0">
                     <Link href="/docs/web_politica_privacidad">
                         <div className="flex flex-col justify-center gap-3 h-60 w-60 rounded-3xl border border-gray-200 shadow-lg p-5 m-5 hover:scale-105 transition-transform duration-300 ease-in-out">
                             <div className="border-8 rounded-full border-gray-500 w-[100px] mx-auto">

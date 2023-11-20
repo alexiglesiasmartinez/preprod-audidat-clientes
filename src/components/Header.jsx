@@ -11,7 +11,7 @@ import {
 
 const Header = () => {
    return (
-      <header className="bg-secondaryGradient text-white text-center sticky z-10 p-5 shadow-2xl rounded-md">
+      <header className="bg-secondaryGradient text-white text-center sticky z-10 py-3 px-6 shadow-2xl rounded-3xl">
          <div className="grid grid-cols-2 align-middle">
             <div className="flex items-center gap-3">
                <Link href="/">

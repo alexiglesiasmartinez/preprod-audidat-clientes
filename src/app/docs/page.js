@@ -7,7 +7,7 @@ export default function Docs() {
     return (
         <>
             <Header />
-            <div className="pl-52 pr-52 py-7 flex flex-col justify-start items-center gap-5 min-h-[83vh] h-auto">
+            <div className="pl-16 pr-16 py-7 flex flex-col justify-start items-center gap-5 min-h-[83vh] h-auto">
                 <h1 className="text-2xl font-bold text-center">DOCUMENTACIÓN</h1>
                 <p><Link href="/ndocs" className="italic underline">Documentación</Link> / <Link href="/docs" className="italic underline">Protección de datos</Link></p>
                 <h3 className="text-lg font-bold text-center">Sistema de Cumplimiento Normativo</h3>

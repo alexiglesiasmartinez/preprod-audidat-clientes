@@ -6,7 +6,7 @@ export default function AvisoLegal() {
   return (
     <>
       <Header />
-      <div className="pl-52 pr-52 py-7 flex flex-col gap-5 h-screen">
+      <div className="pl-16 pr-16 py-7 flex flex-col gap-5 h-screen">
         <h1 className="text-2xl font-bold text-center">AVISO LEGAL</h1>
         <Image src="/cumplimiento_normativo_360.png" className="mx-auto" width={150} height={150} alt="doc" />
         <div className="flex flex-col gap-2 text-justify">

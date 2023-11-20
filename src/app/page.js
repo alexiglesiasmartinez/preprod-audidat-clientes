@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <>
       <Header />
-      <div className="min-h-screen pl-52 pr-52 py-7 flex flex-col gap-5">
+      <div className="min-h-screen pl-16 pr-16 py-7 flex flex-col gap-5">
         <h1 className="text-2xl font-bold text-center">BIENVENIDO A AUDIDAT</h1>
         <Image src="/cumplimiento_normativo_360.png" className="mx-auto" width={150} height={150} alt="doc" />
         <div className="flex flex-col gap-2 text-justify">

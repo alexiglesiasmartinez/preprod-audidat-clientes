@@ -7,7 +7,7 @@ export default function DocsPrincipiosRoot() {
     return (
         <>
             <Header />
-            <div className="pl-52 pr-52 py-7 flex flex-col justify-start items-center gap-5 min-h-[83vh] h-auto">
+            <div className="pl-16 pr-16 py-7 flex flex-col justify-start items-center gap-5 min-h-[83vh] h-auto">
                 <h1 className="text-2xl font-bold text-center">DOCUMENTACIÓN</h1>
                 <p className="text-center"><Link href="/ndocs" className="italic underline">Documentación</Link> / <Link href="/docs" className="italic underline">Protección de datos</Link> / <Link href="/docs/principios_root" className="italic underline">Cláusulas informativas y textos legales</Link></p>
                 <h3 className="text-lg font-bold text-center">Cláusulas informativas y textos legales</h3>
@@ -19,7 +19,7 @@ export default function DocsPrincipiosRoot() {
                     <li className="text-justify">Presentar una información básica en un primer nivel, de forma resumida, en el mismo momento y en el mismo medio en que se recojan los datos.</li>
                     <li className="text-justify">Remitir a la información adicional en un segundo nivel, donde se presentarán detalladamente el resto de las informaciones, en un medio más adecuado para su presentación, comprensión y, si se desea, archivo.</li>
                 </div>
-                <div className="grid grid-cols-4 justify-center text-center gap-0">
+                <div className="grid grid-cols-3 justify-center text-center gap-0">
                     <Link href="/docs/principios_admon">
                         <div className="flex flex-col justify-center gap-3 h-60 w-60 rounded-3xl border border-gray-200 shadow-lg p-5 m-5 hover:scale-105 transition-transform duration-300 ease-in-out">
                             <div className="border-8 rounded-full border-gray-500 w-[100px] mx-auto">

@@ -6,7 +6,7 @@ import Footer from "@/components/Footer";
 export default function Ndocs() {
   return (
     <><Header />
-      <div className="pl-32 pr-32 py-7 flex flex-col justify-start items-center gap-5 h-screen">
+      <div className="pl-16 pr-16 py-7 flex flex-col justify-start items-center gap-5 h-fit">
         <h1 className="text-2xl font-bold text-center">DOCUMENTACIÓN</h1>
         <Link href="/ndocs" className="italic underline">Documentación</Link>
         <h3 className="text-lg font-bold text-center">Sistema de Cumplimiento Normativo</h3>

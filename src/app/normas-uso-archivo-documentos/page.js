@@ -7,7 +7,7 @@ export default function NormasUsoArchivoDocumentos() {
   return (
     <>
       <Header />
-      <div className="pl-52 pr-52 py-7 flex flex-col gap-5 h-max">
+      <div className="pl-16 pr-16 py-7 flex flex-col gap-5 h-max">
         <h1 className="text-2xl font-bold text-center">NORMAS DE USO DE ARCHIVO DE DOCUMENTOS</h1>
         <Image src="/cumplimiento_normativo_360.png" className="mx-auto" width={150} height={150} alt="cumplimiento normativo audidat" />
         <div className="flex flex-col gap-2 text-justify">
