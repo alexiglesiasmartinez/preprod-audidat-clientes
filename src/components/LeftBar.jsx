@@ -16,7 +16,7 @@ import {
 } from "react-icons/md";
 
 const LeftBar = () => {
-   const [visible, setVisible] = useState(false);
+   const [visible, setVisible] = useState(true);
    const toggleVisibility = () => {
       setVisible(!visible);
    };
