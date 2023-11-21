@@ -23,7 +23,7 @@ export default function Tareas() {
                         <div className="flex justify-center text-white bg-mainColor w-fit p-2 rounded-full">
                            <MdCheckCircle />
                         </div>
-                        <h1 className="w-full text-center">Tareas completas</h1>
+                        <h1 className="w-full text-center">Completas</h1>
                         <h1 className="text-5xl font-black w-full text-center">14</h1>
                      </div>
                      <TareasSummary />
@@ -33,7 +33,7 @@ export default function Tareas() {
                         <div className="flex justify-center text-white bg-mainColor w-fit p-2 rounded-full">
                            <MdClose />
                         </div>
-                        <h1 className="w-full text-center">Tareas incompletas</h1>
+                        <h1 className="w-full text-center">Incompletas</h1>
                         <h1 className="text-5xl font-black w-full text-center">5</h1>
                      </div>
                      <TareasSummary />

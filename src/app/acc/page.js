@@ -9,17 +9,39 @@ export default function AudidatCumple() {
             <div className="pl-16 pr-16 py-7 flex flex-col justify-start items-center gap-5 min-h-[83vh] h-auto">
                 <div className="flex items-center justify-center shadow-lg p-10 mb-6 rounded-xl">
                     <Link href="/acc">Presentación</Link>
-                    <Image src="/acc_paso1.png" width={60} height={60} alt="doc" />
-                    <Image src="/acc_paso2.png" width={60} height={60} alt="doc" />
-                    <Image src="/acc_paso3.png" width={60} height={60} alt="doc" />
-                    <Image src="/acc_paso4.png" width={60} height={60} alt="doc" />
-                    <Image src="/acc_paso5.png" width={60} height={60} alt="doc" />
-                    <Image src="/acc_paso6.png" width={60} height={60} alt="doc" />
-                    <Image src="/acc_paso7.png" width={60} height={60} alt="doc" />
-                    <Image src="/acc_paso8.png" width={60} height={60} alt="doc" />
-                    <Image src="/acc_paso9.png" width={60} height={60} alt="doc" />
-                    <Image src="/acc_paso10.png" width={60} height={60} alt="doc" />
-                    <Image src="/acc_paso11.png" width={60} height={60} alt="doc" />
+                    <Link href="/acc/1_politica_proteccion_datos_inst">
+                        <Image src="/acc_paso1.png" width={60} height={60} alt="doc" />
+                    </Link>
+                    <Link href="/acc/1_politica_proteccion_datos_inst">
+                        <Image src="/acc_paso2.png" width={60} height={60} alt="doc" />
+                    </Link>
+                    <Link href="/acc/1_politica_proteccion_datos_inst">
+                        <Image src="/acc_paso3.png" width={60} height={60} alt="doc" />
+                    </Link>
+                    <Link href="/acc/1_politica_proteccion_datos_inst">
+                        <Image src="/acc_paso4.png" width={60} height={60} alt="doc" />
+                    </Link>
+                    <Link href="/acc/1_politica_proteccion_datos_inst">
+                        <Image src="/acc_paso5.png" width={60} height={60} alt="doc" />
+                    </Link>
+                    <Link href="/acc/1_politica_proteccion_datos_inst">
+                        <Image src="/acc_paso6.png" width={60} height={60} alt="doc" />
+                    </Link>
+                    <Link href="/acc/1_politica_proteccion_datos_inst">
+                        <Image src="/acc_paso7.png" width={60} height={60} alt="doc" />
+                    </Link>
+                    <Link href="/acc/1_politica_proteccion_datos_inst">
+                        <Image src="/acc_paso8.png" width={60} height={60} alt="doc" />
+                    </Link>
+                    <Link href="/acc/1_politica_proteccion_datos_inst">
+                        <Image src="/acc_paso9.png" width={60} height={60} alt="doc" />
+                    </Link>
+                    <Link href="/acc/1_politica_proteccion_datos_inst">
+                        <Image src="/acc_paso10.png" width={60} height={60} alt="doc" />
+                    </Link>
+                    <Link href="/acc/1_politica_proteccion_datos_inst">
+                        <Image src="/acc_paso11.png" width={60} height={60} alt="doc" />
+                    </Link>
                     <Image src="/acc_paso12.png" width={60} height={60} alt="doc" />
                 </div>
                 <h1 className="text-2xl font-bold">AUDIDAT CUMPLE</h1>
