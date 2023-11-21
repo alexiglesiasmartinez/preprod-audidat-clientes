@@ -116,7 +116,7 @@ export default function AudidatCumple_1_cuestionario() {
 
                     <div id="pregunta5" className="mb-6 bg-white p-6 shadow rounded-3xl">
                         <div className="mb-4">
-                            <label className="block text-black text-sm font-bold mb-2">5. ¿Se ha publicado la «Política de Protección de Datos» de su entidad en su página web, a fin de que sea conocida por todo el mundo? (Marcar "No aplica" si su entidad no dispone de página web)</label>
+                            <label className="block text-black text-sm font-bold mb-2">5. ¿Se ha publicado la «Política de Protección de Datos» de su entidad en su página web, a fin de que sea conocida por todo el mundo? (Marcar &quot;No aplica&quot; si su entidad no dispone de página web)</label>
                             <div className="mt-2">
                                 <label className="inline-flex items-center">
                                     <input id="politicaPublicada" type="radio" name="politicaPublicada" value="SI" className="form-radio text-indigo-600" />
