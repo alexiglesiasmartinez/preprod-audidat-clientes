@@ -1,11 +1,10 @@
 import Image from "next/image";
 import Link from "next/link";
-import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
 export default function DocsWebPoliticaProteccionDatos() {
     return (
-        <><Header />
+        <>
             <div className="pl-16 pr-16 py-7 flex flex-col justify-start items-center gap-5 min-h-[83vh] h-auto">
                 <h1 className="text-2xl font-bold text-center">DOCUMENTACIÓN</h1>
                 <p><Link href="/ndocs" className="italic underline">Documentación</Link> / <Link href="/docs" className="italic underline">Protección de datos</Link> / <Link href="/docs/protocolo_pagina_web" className="italic underline">Protocolo página web y redes sociales</Link> / <Link href="/docs/web_politica_proteccion_datos" className="italic underline">Compromiso con la protección de datos personales</Link></p>

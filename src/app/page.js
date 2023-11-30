@@ -1,27 +1,84 @@
 import Image from "next/image";
-import Header from "@/components/Header";
+import TareasList from "@/components/TareasList";
+import TareasSummary from "@/components/TareasSummary";
+import DashboardLinealGraph from "@/components/DashboardLinealGraph";
 import Footer from "@/components/Footer";
+
+import {
+  MdDashboard,
+  MdCheckCircle,
+  MdClose
+} from "react-icons/md";
 
 export default function Home() {
   return (
     <>
-      <Header />
-      <div className="min-h-screen pl-16 pr-16 py-7 flex flex-col gap-5">
-        <h1 className="text-2xl font-bold text-center">BIENVENIDO A AUDIDAT</h1>
-        <Image src="/cumplimiento_normativo_360.png" className="mx-auto" width={150} height={150} alt="doc" />
-        <div className="flex flex-col gap-2 text-justify">
-          <p>Bienvenid@ a nuestra plataforma digital. Es un placer para AUDIDAT que hayas decidido acceder a este espacio virtual elaborado exclusivamente para ti, donde encontrarás todas las herramientas y recursos necesarios para gestionar un auténtico sistema de cumplimiento normativo integral.</p>
-          <p>Queremos que tu experiencia con la plataforma digital sea lo más satisfactoria y útil posible, razón por la cual hemos generado una plataforma sencilla de utilizar, intuitiva, segura y confiable para que puedas disfrutar de una experiencia digital única.</p>
-          <p>En tu plataforma dispondrás, en un entorno siempre accesible generado a través de procedimientos completamente seguros, de todos los instrumentos e instrucciones necesarios para cumplir con diversas obligaciones legales que te afectan en el normal desarrollo de tu actividad.</p>
-          <p>Te recomendamos que no te limites a utilizar tu plataforma digital para cumplir de manera estricta con las distintas normativas, sino que aproveches las completas funcionalidades y servicios disponibles en este entorno para implantar un auténtico sistema de gestión de riesgos empresariales.</p>
-          <p>Cuando hayas incorporado la utilización de la plataforma al normal desenvolvimiento de tu trabajo, te percatarás de la gran cantidad de beneficios que aporta a tu actividad diaria, como la optimización de los procesos organizativos, el exquisito cumplimiento normativo, el fomento de una cultura ética y responsable, la mejora en la calidad de la actividad desempeñada, el enriquecimiento reputacional o el mayor índice de satisfacción de tus stakeholders.</p>
-          <p>Para ello, el equipo de más de 150 profesionales que conforman AUDIDAT estará siempre a tu disposición, actualizando constantemente tu plataforma digital e informándote de todos los cambios que pudieran afectarte. Además, podrás contactar con nosotros siempre que quieras a través de teléfono o correo electrónico, canales por los que estaremos encantados de atenderte para adoptar cualquier oportunidad de mejora o para resolver las dudas que puedan surgir.</p>
-          <p>Para comenzar con este apasionante proceso en el que se encuentran inmersas más de 12.000 organizaciones a nivel nacional, únicamente debes acceder a tu plataforma y comenzar a explorar las distintas secciones, documentos y funcionalidades que ofrece. Te agradecemos sinceramente que hayas elegido a AUDIDAT como tu consultora de cumplimiento normativo y de gestión de riesgos empresariales.</p>
-          <p>Inicie este proceso visitando el apartado de Documentación</p>
-          <p>Un saludo.</p>
+
+      <div className="pl-16 pr-16 py-7 flex flex-col justify-start items-center gap-5 min-h-[83vh] h-auto">
+        <h1 className="text-2xl font-bold text-center">INICIO</h1>
+        <div className="w-full">
+          <div className='grid lg:grid-cols-3 grid-cols-1 gap-4 justify-center items-start mb-4 ml-4 mr-4 h-fit w-full'>
+            <div className="flex justify-between items-center gap-4 bg-white rounded-2xl p-12 shadow-md hover:shadow-lg transition duration-300">
+              <div className="flex flex-col justify-center items-center gap-3 w-3/6">
+                <div className="flex justify-center text-white bg-mainColor w-fit p-2 rounded-full">
+                  <MdCheckCircle />
+                </div>
+                <h1 className="w-full text-center">Dato 1</h1>
+                <h1 className="text-5xl font-black w-full text-center">14</h1>
+              </div>
+              <TareasSummary />
+            </div>
+            <div className="flex justify-between items-center gap-4 bg-white rounded-2xl p-12 shadow-md hover:shadow-lg transition duration-300">
+              <div className="flex flex-col justify-center items-center gap-3 w-3/6">
+                <div className="flex justify-center text-white bg-mainColor w-fit p-2 rounded-full">
+                  <MdCheckCircle />
+                </div>
+                <h1 className="w-full text-center">Dato 2</h1>
+                <h1 className="text-5xl font-black w-full text-center">14</h1>
+              </div>
+              <TareasSummary />
+            </div>
+            <div className="flex justify-between items-center gap-4 bg-white rounded-2xl p-12 shadow-md hover:shadow-lg transition duration-300 w-full">
+              <div className="flex flex-col justify-center items-center gap-3 w-3/6">
+                <div className="flex justify-center text-white bg-mainColor w-fit p-2 rounded-full">
+                  <MdClose />
+                </div>
+                <h1 className="w-full text-center">Dato 3</h1>
+                <h1 className="text-5xl font-black w-full text-center">5</h1>
+              </div>
+              <TareasSummary />
+            </div>
+          </div>
+        </div>
+        <div className="flex justify-center items-center gap-6">
+          <div className="overflow-x-auto relative shadow-md sm:rounded-lg">
+            <table className="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+              <thead className="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+                <tr>
+                  <th scope="col" className="py-3 px-6">Columna 1</th>
+                  <th scope="col" className="py-3 px-6">Columna 2</th>
+                  <th scope="col" className="py-3 px-6">Columna 3</th>
+                  <th scope="col" className="py-3 px-6">Columna 4</th>
+                </tr>
+              </thead>
+              <tbody>
+                {[...Array(6)].map((_, index) => (
+                  <tr key={index} className="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                    <td className="py-4 px-6">Dato 1</td>
+                    <td className="py-4 px-6">Dato 2</td>
+                    <td className="py-4 px-6">Dato 3</td>
+                    <td className="py-4 px-6">Dato 4</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+
+          <div>
+            <DashboardLinealGraph />
+          </div>
         </div>
       </div>
-      <Footer />
     </>
   );
 }

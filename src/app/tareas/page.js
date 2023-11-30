@@ -1,7 +1,6 @@
 import React from "react";
 import TareasList from "@/components/TareasList";
 import TareasSummary from "@/components/TareasSummary";
-import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
 import {
@@ -13,7 +12,6 @@ import {
 export default function Tareas() {
    return (
       <>
-         <Header />
          <div className="pl-16 pr-16 py-7 flex flex-col justify-start items-center gap-5 min-h-[83vh] h-auto">
             <h1 className="text-2xl font-bold text-center">TAREAS</h1>
             <div>

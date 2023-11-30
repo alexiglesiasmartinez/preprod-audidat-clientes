@@ -1,11 +1,10 @@
 import Image from "next/image";
 import Link from "next/link";
-import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
 export default function DocsRegistroActividades() {
     return (
-        <><Header />
+        <>
             <div className="pl-16 pr-16 py-7 flex flex-col justify-start items-center gap-5 min-h-[83vh] h-auto">
                 <h1 className="text-2xl font-bold text-center">DOCUMENTACIÓN</h1>
                 <p><Link href="/ndocs" className="italic underline">Documentación</Link> / <Link href="/docs" className="italic underline">Protección de datos</Link> / <Link href="/docs/registro_actividades" className="italic underline">Registro de actividades de tratamiento</Link></p>

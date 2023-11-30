@@ -1,11 +1,10 @@
 import Image from "next/image";
 import Link from "next/link";
-import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
 export default function DocsPrincipiosRrhh() {
     return (
-        <><Header />
+        <>
             <div className="pl-16 pr-16 py-7 flex flex-col justify-start items-center gap-5 min-h-[83vh] h-auto">
                 <h1 className="text-2xl font-bold text-center">DOCUMENTACIÓN</h1>
                 <p><Link href="/ndocs" className="italic underline">Documentación</Link> / <Link href="/docs" className="italic underline">Protección de datos</Link> / <Link href="/docs/principios_root" className="italic underline">Cláusulas informativas y textos legales</Link> / <Link href="/docs/principios_rrhh" className="italic underline">Área de recursos humanos</Link></p>

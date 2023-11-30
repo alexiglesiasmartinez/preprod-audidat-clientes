@@ -1,4 +1,3 @@
-import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Link from "next/link";
 import Image from "next/image";
@@ -7,7 +6,6 @@ import Image from "next/image";
 export default function AudidatCumple_1_cuestionario() {
     return (
         <>
-            <Header />
             <div className="pl-16 pr-16 py-7 flex flex-col justify-start items-center gap-5 min-h-[83vh] h-auto">
                 <div className="flex items-center justify-center shadow-lg p-10 mb-6 rounded-xl">
                     <Link href="/acc">Presentación</Link>

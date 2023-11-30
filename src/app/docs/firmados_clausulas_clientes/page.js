@@ -1,11 +1,9 @@
 import Link from "next/link";
-import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
 export default function DocsFirmadosClausulasClientes() {
     return (
         <>
-            <Header />
             <div className="pl-16 pr-16 py-7 flex flex-col justify-start items-center gap-5 min-h-[83vh] h-auto">
                 <h1 className="text-2xl font-bold text-center">DOCUMENTACIÓN</h1>
                 <p><Link href="/ndocs" className="italic underline">Documentación</Link> / <Link href="/docs" className="italic underline">Protección de datos</Link> / <Link href="/docs/principios_root" className="italic underline">Cláusulas informativas y textos legales</Link> / <Link href="/docs/principios_admon" className="italic underline">Área de administración</Link> / <Link href="/docs/firmados_clausulas_clientes" className="italic underline">Archivo de documentos firmados</Link></p>

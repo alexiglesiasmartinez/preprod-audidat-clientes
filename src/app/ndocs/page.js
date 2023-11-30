@@ -1,11 +1,10 @@
 import Image from "next/image";
 import Link from "next/link";
-import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
 export default function Ndocs() {
   return (
-    <><Header />
+    <>
       <div className="pl-16 pr-16 py-7 flex flex-col justify-start items-center gap-5 h-fit">
         <h1 className="text-2xl font-bold text-center">DOCUMENTACIÓN</h1>
         <Link href="/ndocs" className="italic underline">Documentación</Link>
