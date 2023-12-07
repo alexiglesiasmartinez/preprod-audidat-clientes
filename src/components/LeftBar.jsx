@@ -12,17 +12,22 @@ import {
    MdOutlineAddTask,
    MdArrowLeft,
    MdArrowRight,
+   MdOutlineCardGiftcard,
 } from "react-icons/md";
+import CustomModal from "@/components/CustomModal";
 
 const LeftBar = () => {
    const [visible, setVisible] = useState(true);
    const toggleVisibility = () => {
       setVisible(!visible);
    };
+   const [modalIsOpen, setModalIsOpen] = useState(false);
+   const openModal = () => setModalIsOpen(true);
+   const closeModal = () => setModalIsOpen(false);
    return (
       <>
          {visible ? (
-            <aside className="sticky top-10 left-0 w-[17%] h-screen bg-gray-50 text-white p-5 z-10 shadow-2xl">
+            <aside className="sticky top-14 left-0 w-[17%] h-screen bg-gray-50 text-white p-4 z-10 shadow-2xl">
                <div className="flex items-start justify-center flex-col gap-2">
                   <span className="text-sm mb-1 text-black">Acceso rápido</span>
                   <Link
@@ -93,6 +98,22 @@ const LeftBar = () => {
                      <MdSupervisedUserCircle />
                      <span className="text-sm">Audidat CUMPLE</span>{" "}
                   </Link>
+               </div>
+               <div className="flex items-start justify-center flex-col gap-2 mt-2">
+                  <span className="text-sm mt-1 mb-1 text-black">
+                     Invita a una empresa
+                  </span>
+                  <p
+                     className="font-light flex items-center justify-start flex-row gap-3 bg-mainColor2 w-full py-3 px-4 hover:bg-mainColor3 transition-colors duration-300 rounded-lg cursor-pointer"
+                     onClick={openModal}
+                  >
+                     <MdOutlineCardGiftcard />
+                     <span className="text-sm font-medium">INVITAR</span>{" "}
+                  </p>
+                  <CustomModal
+                     isOpen={modalIsOpen}
+                     onRequestClose={closeModal}
+                  />
                </div>
                <button
                   onClick={toggleVisibility}

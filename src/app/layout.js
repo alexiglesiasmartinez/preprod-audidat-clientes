@@ -4,7 +4,6 @@ import Header from "@/components/Header";
 
 import LeftBar from "@/components/LeftBar";
 import RightBar from "@/components/RightBar";
-import Footer from "@/components/Footer";
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -16,16 +15,14 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
-        <div>
-          <Header />
-          <div className="flex bg-white">
-            <LeftBar />
-            <main className="flex-1 p-2">
-              {children}
-            </main>
-            <RightBar />
-          </div>
+      <body className={`${inter.className}`}>
+        <Header />
+        <div className='flex bg-white top-14'>
+          <LeftBar />
+          <main className="flex-1 p-2">
+            {children}
+          </main>
+          <RightBar />
         </div>
       </body >
     </html >

@@ -38,9 +38,10 @@ export default function Tareas() {
                   </div>
                </div>
                <TareasList />
+               <TareasList />
             </div>
          </div>
-         <Footer />
+         {/*<Footer />*/}
       </>
    );
 };

@@ -2,10 +2,8 @@ import Image from "next/image";
 import TareasList from "@/components/TareasList";
 import TareasSummary from "@/components/TareasSummary";
 import DashboardLinealGraph from "@/components/DashboardLinealGraph";
-import Footer from "@/components/Footer";
 
 import {
-  MdDashboard,
   MdCheckCircle,
   MdClose
 } from "react-icons/md";
@@ -13,7 +11,6 @@ import {
 export default function Home() {
   return (
     <>
-
       <div className="pl-16 pr-16 py-7 flex flex-col justify-start items-center gap-5 min-h-[83vh] h-auto">
         <h1 className="text-2xl font-bold text-center">INICIO</h1>
         <div className="w-full">
@@ -50,8 +47,8 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className="flex justify-center items-center gap-6">
-          <div className="overflow-x-auto relative shadow-md sm:rounded-lg">
+        <div className="flex justify-center items-center gap-6 w-full p-4">
+          <div className="overflow-x-auto relative shadow-md sm:rounded-lg w-full">
             <table className="w-full text-sm text-left text-gray-500 dark:text-gray-400">
               <thead className="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
                 <tr>
@@ -73,8 +70,8 @@ export default function Home() {
               </tbody>
             </table>
           </div>
-
-          <div>
+          <div className="w-fit">
+            <DashboardLinealGraph />
             <DashboardLinealGraph />
           </div>
         </div>
