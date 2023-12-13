@@ -9,7 +9,6 @@ import {
    MdOutlineMessage,
    MdOutlineNotificationsNone,
    MdLogout,
-   MdOutlinePersonOutline,
    MdHelpOutline,
    MdPersonOutline,
    MdOutlineSettings,
@@ -37,7 +36,7 @@ const Header = () => {
    }, []);
 
    return (
-      <header className="sticky flex items-center bg-gray-50 text-mainColor text-center top-0 left-0 h-14 w-full z-20 py-2 px-5 shadow">
+      <header className="fixed flex items-center bg-gray-50 text-mainColor text-center top-0 left-0 h-14 w-full z-20 py-2 px-5 shadow">
          <div className="grid grid-cols-2 align-middle w-full">
             <div className="flex items-center gap-3">
                <Link href="/">

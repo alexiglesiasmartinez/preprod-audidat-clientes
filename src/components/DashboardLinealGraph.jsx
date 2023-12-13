@@ -5,12 +5,11 @@ import { Line } from "react-chartjs-2";
 import Chart from "chart.js/auto";
 
 const DashboardLinealGraph = () => {
-   // Datos para el gráfico de líneas
    const data = {
       labels: ["Enero", "Febrero", "Marzo", "Abril", "Mayo"],
       datasets: [
          {
-            label: "Ventas 2023",
+            label: "Cumplimiento 2023",
             data: [65, 59, 80, 81, 56],
             fill: false,
             backgroundColor: "#031835",
@@ -20,7 +19,6 @@ const DashboardLinealGraph = () => {
       ],
    };
 
-   // Opciones para el gráfico de líneas
    const options = {
       responsive: true,
       scales: {
@@ -31,7 +29,7 @@ const DashboardLinealGraph = () => {
    };
 
    return (
-      <div>
+      <div className="w-[600px] h-[300px]">
          <Line data={data} options={options} />
       </div>
    );

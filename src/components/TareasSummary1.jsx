@@ -4,7 +4,7 @@ import React from "react";
 import { Doughnut } from "react-chartjs-2";
 import Chart from "chart.js/auto";
 
-const TareasSummary = () => {
+const TareasSummary1 = () => {
    const data = {
       labels: ["Relleno", "Vacío"],
       datasets: [
@@ -41,4 +41,4 @@ const TareasSummary = () => {
    );
 };
 
-export default TareasSummary;
+export default TareasSummary1;

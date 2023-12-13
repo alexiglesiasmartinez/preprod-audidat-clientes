@@ -1,6 +1,6 @@
 import React from "react";
 import TareasList from "@/components/TareasList";
-import TareasSummary from "@/components/TareasSummary";
+import TareasSummary from "@/components/TareasSummary1";
 import Footer from "@/components/Footer";
 
 import {

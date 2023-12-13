@@ -27,7 +27,7 @@ const LeftBar = () => {
    return (
       <>
          {visible ? (
-            <aside className="sticky top-14 left-0 w-[17%] h-screen bg-gray-50 text-white p-4 z-10 shadow-2xl">
+            <aside className="fixed top-14 pt-10 left-0 w-[17%] h-screen bg-gray-50 text-white p-4 z-10 shadow-2xl">
                <div className="flex items-start justify-center flex-col gap-2">
                   <span className="text-sm mb-1 text-black">Acceso rápido</span>
                   <Link

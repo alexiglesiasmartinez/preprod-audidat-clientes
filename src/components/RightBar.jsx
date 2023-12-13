@@ -19,7 +19,7 @@ const RightBar = () => {
       <>
          {visible ? (
             <aside
-               className={`sticky top-0 right-0 w-[15%] h-screen text-white p-5 z-10 transition-opacity ${
+               className={`fixed top-14 right-0 pt-10 w-[15%] h-screen text-white p-5 z-10 transition-opacity ${
                   visible ? "opacity-100" : "opacity-0"
                }`}
             >
