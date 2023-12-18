@@ -16,3 +16,27 @@
       rgba(4, 30, 66, 1) 70%
    );
 }
+
+/* Scroll */
+
+::-webkit-scrollbar {
+   width: 6px;
+}
+
+::-webkit-scrollbar-track {
+   background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+   background: #c4c4c4;
+   border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+   background: #b6b6b6;
+}
+
+* {
+   scrollbar-width: thin;
+   scrollbar-color: #a0a0a0 transparent;
+}

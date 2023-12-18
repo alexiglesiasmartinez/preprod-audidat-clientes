@@ -7,29 +7,65 @@ import {
    MdEmail,
    MdArrowLeft,
    MdArrowRight,
+   MdOutlineWarningAmber,
 } from "react-icons/md";
+import CustomModal from "@/components/PopupSolicitaAuditoria";
 
 const RightBar = () => {
    const [visible, setVisible] = useState(true);
    const toggleVisibility = () => {
       setVisible(!visible);
    };
+   const [modalIsOpen, setModalIsOpen] = useState(false);
+   const openModal = () => setModalIsOpen(true);
+   const closeModal = () => setModalIsOpen(false);
 
    return (
       <>
          {visible ? (
             <aside
-               className={`fixed top-14 right-0 pt-10 w-[15%] h-screen text-white p-5 z-10 transition-opacity ${
+               className={`fixed top-10 right-0 pt-10 w-[15%] h-screen text-white p-5 z-10 transition-opacity ${
                   visible ? "opacity-100" : "opacity-0"
                }`}
             >
                <div className="flex items-start justify-center flex-col gap-2 mt-0">
                   <div className="flex justify-center items-center w-full">
                      <span className="text-sm font-normal text-black">
+                        Contacto
+                     </span>
+                  </div>
+                  <div className="font-light flex items-center justify-start flex-col gap-6 bg-gray-50 w-full mt-2 py-5 px-3 rounded-xl shadow">
+                     <div className="font-light flex items-center justify-start flex-col gap-5 w-full py-0 px-3 hover:shadow-black transition-colors duration-300 rounded-xl cursor-pointer">
+                        <div className="flex items-center gap-2">
+                           <div>
+                              <MdPhone size={22} className="text-black" />
+                           </div>
+                           <div>
+                              <p className="text-sm font-normal text-black">
+                                 Telefónico
+                              </p>
+                           </div>
+                        </div>
+                     </div>
+                     <div className="font-light flex items-center justify-start flex-col gap-5 w-full py0 px-3 hover:shadow-black transition-colors duration-300 rounded-xl cursor-pointer">
+                        <div className="flex items-center gap-2">
+                           <div>
+                              <MdEmail size={22} className="text-black" />
+                           </div>
+                           <div>
+                              <p className="text-sm font-normal text-black">
+                                 Electrónico
+                              </p>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div className="flex justify-center items-center w-full mt-2">
+                     <span className="text-sm font-normal text-black">
                         Actividad reciente
                      </span>
                   </div>
-                  <div className="font-light flex items-center justify-start flex-col gap-4 bg-gray-50 w-full py-5 px-3  shadow rounded-xl">
+                  <div className="font-light flex items-center justify-start flex-col gap-4 bg-gray-50 w-full py-5 px-3 shadow rounded-xl">
                      <div className="flex items-center gap-2">
                         <div>
                            <MdOutlineTaskAlt size={20} className="text-black" />
@@ -53,19 +89,6 @@ const RightBar = () => {
                            </p>
                            <p className="text-xs text-gray-600">
                               Hace 1 minuto
-                           </p>
-                        </div>
-                     </div>
-                     <div className="flex items-center gap-2">
-                        <div>
-                           <MdOutlineTaskAlt size={20} className="text-black" />
-                        </div>
-                        <div>
-                           <p className="text-sm font-medium text-black">
-                              Tarea completada
-                           </p>
-                           <p className="text-xs text-gray-600">
-                              Hace 10 minutos
                            </p>
                         </div>
                      </div>
@@ -101,53 +124,22 @@ const RightBar = () => {
                            <p className="text-xs text-gray-600">Hace 2 días</p>
                         </div>
                      </div>
-                     <div className="flex items-center gap-2">
-                        <div>
-                           <MdOutlineDownloadForOffline
-                              size={22}
-                              className="text-black"
-                           />
-                        </div>
-                        <div>
-                           <p className="text-sm font-medium text-black">
-                              Fichero descargado
-                           </p>
-                           <p className="text-xs text-gray-600">
-                              Hace 1 semana
-                           </p>
-                        </div>
-                     </div>
                   </div>
-                  <div class="flex justify-center items-center w-full mt-5">
-                     <span className="text-sm font-normal text-black">
-                        Contacto
-                     </span>
-                  </div>
-                  <div className="font-light flex items-center justify-start flex-col gap-6 bg-gray-50 w-full mt-2 py-5 px-3 rounded-xl shadow">
-                     <div className="font-light flex items-center justify-start flex-col gap-5 w-full py-0 px-3 hover:shadow-black transition-colors duration-300 rounded-xl cursor-pointer">
-                        <div className="flex items-center gap-2">
-                           <div>
-                              <MdPhone size={22} className="text-black" />
-                           </div>
-                           <div>
-                              <p className="text-sm font-normal text-black">
-                                 Telefónico
-                              </p>
-                           </div>
-                        </div>
-                     </div>
-                     <div className="font-light flex items-center justify-start flex-col gap-5 w-full py0 px-3 hover:shadow-black transition-colors duration-300 rounded-xl cursor-pointer">
-                        <div className="flex items-center gap-2">
-                           <div>
-                              <MdEmail size={22} className="text-black" />
-                           </div>
-                           <div>
-                              <p className="text-sm font-normal text-black">
-                                 Electrónico
-                              </p>
-                           </div>
-                        </div>
-                     </div>
+                  <div className="font-light flex items-center justify-start flex-col gap-2 bg-red-100 w-full mt-2 py-5 px-3 rounded-xl shadow">
+                     <MdOutlineWarningAmber size={22} className="text-black" />
+                     <p className="text-base text-black font-bold">
+                        Evita sanciones
+                     </p>
+                     <button
+                        onClick={openModal}
+                        className="bg-mainGradient py-1 px-3 rounded-lg text-white text-base font-light shadow-sm"
+                     >
+                        Solicitar auditoría
+                     </button>
+                     <CustomModal
+                        isOpen={modalIsOpen}
+                        onRequestClose={closeModal}
+                     />
                   </div>
                </div>
                <button

@@ -1,6 +1,6 @@
 import Modal from "react-modal";
 
-import { MdOutlineClose, MdSend } from "react-icons/md";
+import { MdOutlineClose, MdCheck } from "react-icons/md";
 
 const CustomModal = ({ isOpen, onRequestClose }) => {
    return (
@@ -26,35 +26,27 @@ const CustomModal = ({ isOpen, onRequestClose }) => {
                borderRadius: "10px",
                outline: "none",
                padding: "20px",
-               width: "30%",
+               width: "40%",
                minHeight: "200px",
             },
          }}
       >
-         <div className="flex flex-col items-center py-5">
-            <h1 className="text-xl font-bold mb-2">Invita a una empresa</h1>
+         <div className="flex flex-col gap-1 items-center py-5">
+            <h1 className="text-2xl font-bold mb-2">Solicita una auditoría</h1>
             <form className="w-full max-w-sm">
                <div className="mb-4">
-                  <label
-                     className="block text-black text-sm font-normal mb-2 text-center"
-                     htmlFor="email"
-                  >
-                     Escribe el correo de la empresa a la que quieres invitar
-                  </label>
-                  <input
-                     className="appearance-none border rounded shadow w-full py-2 px-3 text-black focus:outline-none focus:shadow-outline text-center"
-                     id="email"
-                     type="email"
-                     placeholder="correo@empresa.com"
-                  />
+                  <p className="text-base text-center">
+                     ¿Desea que su asesor personal se ponga en contacto con
+                     usted para hacer una auditoría de cumplimiento?
+                  </p>
                </div>
                <div className="flex items-center justify-center">
                   <button
                      className="bg-mainColor2 hover:bg-mainColor3 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline flex items-center gap-2 transition ease"
-                     type="submit"
+                     onClick={onRequestClose}
                   >
-                     <MdSend />
-                     Enviar invitación
+                     <MdCheck />
+                     Sí, quiero solicitar la auditoría
                   </button>
                </div>
             </form>
