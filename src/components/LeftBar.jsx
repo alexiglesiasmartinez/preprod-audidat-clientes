@@ -23,6 +23,7 @@ import {
    MdLibraryAddCheck,
    MdFileOpen,
    MdLightbulb,
+   MdCookie,
 } from "react-icons/md";
 import CustomModal from "@/components/PopupInvitaEmpresa";
 
@@ -202,7 +203,7 @@ const LeftBar = () => {
                            <div>
                               <div className="mx-4 my-2">
                                  <Link
-                                    href="/docs"
+                                    href="#"
                                     className="text-black font-light flex items-center justify-start flex-row gap-2 py-1 px-3 w-fit hover:bg-gray-200 duration-300 rounded-lg"
                                  >
                                     <MdFileOpen />
@@ -213,7 +214,7 @@ const LeftBar = () => {
                               </div>
                               <div className="mx-4 my-2">
                                  <Link
-                                    href="/ndocs"
+                                    href="#"
                                     className="text-black font-light flex items-center justify-start flex-row gap-2 py-1 px-3 w-fit hover:bg-gray-200 duration-300 rounded-lg"
                                  >
                                     <MdLightbulb />
@@ -251,7 +252,7 @@ const LeftBar = () => {
                            <div>
                               <div className="mx-4 my-2">
                                  <Link
-                                    href="/docs"
+                                    href="#"
                                     className="text-black font-light flex items-center justify-start flex-row gap-2 py-1 px-3 w-fit hover:bg-gray-200 duration-300 rounded-lg"
                                  >
                                     <MdFileOpen />
@@ -262,7 +263,7 @@ const LeftBar = () => {
                               </div>
                               <div className="mx-4 my-2">
                                  <Link
-                                    href="/ndocs"
+                                    href="#"
                                     className="text-black font-light flex items-center justify-start flex-row gap-2 py-1 px-3 w-fit hover:bg-gray-200 duration-300 rounded-lg"
                                  >
                                     <MdLightbulb />
@@ -302,7 +303,7 @@ const LeftBar = () => {
                            <div>
                               <div className="mx-4 my-2">
                                  <Link
-                                    href="/tareas"
+                                    href="#"
                                     className="text-black font-light flex items-center justify-start flex-row gap-2 py-1 px-3 w-fit hover:bg-gray-200 duration-300 rounded-lg"
                                  >
                                     <MdOutlineDraw />
@@ -318,6 +319,17 @@ const LeftBar = () => {
                                  >
                                     <MdOutlineAddTask />
                                     <span className="text-sm">Tareas</span>{" "}
+                                 </Link>
+                              </div>
+                              <div className="mx-4 my-2">
+                                 <Link
+                                    href="#"
+                                    className="text-black font-light flex items-center justify-start flex-row gap-2 py-1 px-3 w-fit hover:bg-gray-200 duration-300 rounded-lg"
+                                 >
+                                    <MdCookie />
+                                    <span className="text-sm">
+                                       Cookies Web
+                                    </span>{" "}
                                  </Link>
                               </div>
                            </div>
@@ -364,12 +376,12 @@ const LeftBar = () => {
                   </div>
                </div>
                <div className="flex-none">
-                  <div className="flex items-start justify-center flex-col gap-2 mt-2">
-                     <span className="text-sm mt-1 mb-1 text-black">
+                  <div className="flex items-center justify-center flex-col gap-2 px-3">
+                     <span className="text-sm mt-3 mb-1 text-black">
                         Invita a una empresa
                      </span>
                      <p
-                        className="font-light flex items-center justify-start flex-row gap-3 bg-mainColor2 w-5/6 ml-4 py-3 px-5 hover:bg-mainColor3 transition-colors duration-300 rounded-lg cursor-pointer"
+                        className="font-light flex items-center justify-center flex-row gap-2 bg-mainColor2 w-full py-3 hover:bg-mainColor3 transition-colors duration-300 rounded-lg cursor-pointer"
                         onClick={openModal}
                      >
                         <MdOutlineCardGiftcard />

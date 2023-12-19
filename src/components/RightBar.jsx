@@ -12,7 +12,8 @@ import {
    MdFactCheck,
 } from "react-icons/md";
 import CustomModal from "@/components/PopupSolicitaAuditoria";
-import PopupContactaGestorPersonal from "@/components/PopupContactaGestorPersonal";
+import PopupContactaGestorPersonalLlamada from "@/components/PopupContactaGestorPersonalLlamada";
+import PopupContactaGestorPersonalEmail from "@/components/PopupContactaGestorPersonalEmail";
 
 const RightBar = () => {
    const [visible, setVisible] = useState(true);
@@ -27,6 +28,9 @@ const RightBar = () => {
    const openModal2 = () => setModalIsOpen2(true);
    const closeModal2 = () => setModalIsOpen2(false);
 
+   const [modalIsOpen3, setModalIsOpen3] = useState(false);
+   const openModal3 = () => setModalIsOpen3(true);
+   const closeModal3 = () => setModalIsOpen3(false);
    return (
       <>
          {visible ? (
@@ -36,10 +40,7 @@ const RightBar = () => {
                }`}
             >
                <div className="flex items-start justify-center flex-col gap-2 mt-0">
-                  <div
-                     className="font-light flex items-center justify-start flex-col gap-6 bg-gray-50 w-full mt-2 py-5 px-3 rounded-xl shadow"
-                     onClick={openModal2}
-                  >
+                  <div className="font-light flex items-center justify-start flex-col gap-6 bg-gray-50 w-full mt-2 py-5 px-3 rounded-xl shadow">
                      <div className="font-light flex items-center justify-start flex-col gap-5 w-full py-0 px-3 hover:shadow-black transition-colors duration-300 rounded-xl cursor-pointer">
                         <div className="flex items-center flex-col gap-4">
                            <div className="flex justify-center items-center text-center flex-col">
@@ -62,20 +63,31 @@ const RightBar = () => {
                               </div>
                            </div>
                            <div className="flex gap-2">
-                              <div className="flex flex-col justify-center items-center text-center bg-mainGradient text-white rounded-full p-3">
+                              <div
+                                 className="flex flex-col justify-center items-center text-center bg-mainGradient text-white rounded-full p-3"
+                                 onClick={openModal2}
+                              >
                                  <MdPhone size={20} className="text-white" />
                               </div>
-                              <div className="flex flex-col justify-center items-center text-center bg-mainGradient text-white rounded-full p-3">
+                              <PopupContactaGestorPersonalLlamada
+                                 isOpen={modalIsOpen2}
+                                 onRequestClose={closeModal2}
+                              />
+
+                              <div
+                                 className="flex flex-col justify-center items-center text-center bg-mainGradient text-white rounded-full p-3"
+                                 onClick={openModal3}
+                              >
                                  <MdEmail size={20} className="text-white" />
                               </div>
+                              <PopupContactaGestorPersonalEmail
+                                 isOpen={modalIsOpen3}
+                                 onRequestClose={closeModal3}
+                              />
                            </div>
                         </div>
                      </div>
                   </div>
-                  <PopupContactaGestorPersonal
-                     isOpen={modalIsOpen2}
-                     onRequestClose={closeModal2}
-                  />
                   <div className="flex justify-center items-center w-full mt-2">
                      <span className="text-sm font-normal text-black">
                         Actividad reciente
