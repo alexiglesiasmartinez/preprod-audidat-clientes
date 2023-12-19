@@ -42,23 +42,13 @@ const Header = () => {
                <Link href="/">
                   <Image
                      src="/logo-audidat-clientes.png"
-                     width={100}
+                     width={130}
                      height={40}
                      alt="Logo audidat"
                   />
                </Link>
             </div>
             <div className="flex items-center justify-end gap-6">
-               <div className="flex items-center w-2/4 shadow-2xl rounded-lg overflow-hidden bg-white">
-                  <div className="px-4 text-black">
-                     <MdOutlineSearch size="18" />
-                  </div>
-                  <input
-                     type="text"
-                     placeholder="Buscar ..."
-                     className="w-full py-2 text-black focus:outline-none"
-                  />
-               </div>
                <div className="transition transform hover:scale-125">
                   <Link href="#">
                      <MdOutlineMessage size={20} />

@@ -9,7 +9,7 @@ const CustomModal = ({ isOpen, onRequestClose }) => {
          onRequestClose={onRequestClose}
          style={{
             overlay: {
-               backgroundColor: "rgba(0, 0, 0, 0.75)",
+               backgroundColor: "rgba(0, 0, 0, 0.90)",
                zIndex: "50",
             },
             content: {
@@ -50,7 +50,7 @@ const CustomModal = ({ isOpen, onRequestClose }) => {
                </div>
                <div className="flex items-center justify-center">
                   <button
-                     className="bg-mainColor2 hover:bg-mainColor3 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline flex items-center gap-2 transition ease"
+                     className="bg-mainColor2 hover:bg-mainColor3 text-white font-bold py-2 px-4 rounded-md focus:outline-none focus:shadow-outline flex items-center gap-2 transition ease"
                      type="submit"
                   >
                      <MdSend />

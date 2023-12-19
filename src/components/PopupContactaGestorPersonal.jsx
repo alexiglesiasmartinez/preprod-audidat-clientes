@@ -1,6 +1,7 @@
 import Modal from "react-modal";
-
+import Image from "next/image";
 import { MdOutlineClose, MdCheck } from "react-icons/md";
+import Link from "next/link";
 
 const CustomModal = ({ isOpen, onRequestClose }) => {
    return (
@@ -32,22 +33,33 @@ const CustomModal = ({ isOpen, onRequestClose }) => {
          }}
       >
          <div className="flex flex-col gap-1 items-center py-5">
-            <h1 className="text-2xl font-bold mb-2">Solicita una auditoría</h1>
-            <form className="w-full max-w-sm">
-               <div className="mb-4">
-                  <p className="text-base text-center">
-                     ¿Desea que su asesor personal se ponga en contacto con
-                     usted para hacer una auditoría de cumplimiento?
-                  </p>
-               </div>
+            <h1 className="text-2xl font-bold mb-2">
+               Conecta con tu gestor personal
+            </h1>
+            <form className="w-full max-w-lg flex flex-col justify-center items-center gap-5">
+               <p className="text-base text-center">
+                  Bienvenido al sistema de tickets donde podrás conectar
+                  directamente con tu gestor personal. Este sistema te ofrece
+                  una comunicación rápida y eficaz para resolver todas tus
+                  consultas y necesidades.
+               </p>
+               <Image
+                  src="/popupContactaGestorPersonal.png"
+                  width={150}
+                  height={150}
+               />
                <div className="flex items-center justify-center">
-                  <button
-                     className="bg-mainColor2 hover:bg-mainColor3 text-white font-bold py-2 px-4 rounded-md focus:outline-none focus:shadow-outline flex items-center gap-2 transition ease"
+                  <Link
+                     href="/tickets"
+                     className="bg-mainColor2 hover:bg-mainColor3 text-white
+                     font-bold py-2 px-4 rounded focus:outline-none
+                     focus:shadow-outline flex items-center gap-2 transition
+                     ease"
                      onClick={onRequestClose}
                   >
                      <MdCheck />
-                     Sí, quiero solicitar la auditoría
-                  </button>
+                     Contactar con mi gestor personal
+                  </Link>
                </div>
             </form>
             <button

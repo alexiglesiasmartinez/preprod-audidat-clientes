@@ -16,6 +16,13 @@ import {
    MdKeyboardArrowDown,
    MdKeyboardArrowUp,
    MdOutlineDraw,
+   MdOutlineSearch,
+   MdHome,
+   MdConstruction,
+   MdLocationOn,
+   MdLibraryAddCheck,
+   MdFileOpen,
+   MdLightbulb,
 } from "react-icons/md";
 import CustomModal from "@/components/PopupInvitaEmpresa";
 
@@ -27,8 +34,10 @@ const LeftBar = () => {
    const [modalIsOpen, setModalIsOpen] = useState(false);
    const openModal = () => setModalIsOpen(true);
    const closeModal = () => setModalIsOpen(false);
-   const [isOpenAccesoRapido, setIsOpenAccesoRapido] = useState(false);
+   const [isOpenAccesoRapido, setIsOpenAccesoRapido] = useState(true);
    const [isOpenAudidat360, setIsOpenAudidat360] = useState(false);
+   const [isOpenPlanDeIgualdad, setIsOpenPlanDeIgualdad] = useState(false);
+   const [isOpenCompliance, setIsOpenCompliance] = useState(false);
    const [isOpenMisHerramientas, setIsOpenMisHerramientas] = useState(false);
    const [isSeguimientoCumplimiento, setIsSeguimientoCumplimiento] =
       useState(false);
@@ -38,16 +47,26 @@ const LeftBar = () => {
          {visible ? (
             <aside className="fixed top-10 pt-10 pb-32 left-0 w-[17%] h-screen bg-gray-50 text-white p-4 z-10 shadow-2xl flex flex-col justify-between">
                <div className="flex-1 overflow-auto">
-                  <div className="flex items-start justify-center flex-col gap-2 ">
+                  <div className="flex items-start justify-center flex-col gap-4">
+                     <div className="flex items-center shadow-sm rounded-lg overflow-hidden bg-white w-full mb-2">
+                        <div className="px-4 text-black">
+                           <MdOutlineSearch size="18" />
+                        </div>
+                        <input
+                           type="text"
+                           placeholder="Buscar ..."
+                           className="w-full py-2 text-black focus:outline-none"
+                        />
+                     </div>
+
                      <div className="w-full">
-                        <span className="text-sm font-semibold text-black">
-                           BIENVENIDO/A
-                        </span>
-                        <hr className="border-gray-300 my-2 mr-1" />
                         <div className="flex items-center justify-between gap-1 w-full px-3">
-                           <span className="text-sm text-black">
-                              Acceso rápido
-                           </span>
+                           <div className="flex justify-center items-center gap-2">
+                              <MdDashboard className="text-mainColor" />
+                              <span className="text-sm text-black">
+                                 Acceso rápido
+                              </span>
+                           </div>
                            <span
                               className="text-black cursor-pointer rounded-full text-xl hover:bg-gray-100 transition-colors duration-300 p-1"
                               onClick={() =>
@@ -68,7 +87,7 @@ const LeftBar = () => {
                                     href="/"
                                     className="text-black font-light flex items-center justify-start flex-row gap-2 py-1 px-3 w-fit hover:bg-gray-200 duration-300 rounded-lg"
                                  >
-                                    <MdDashboard className="text-mainColor" />
+                                    <MdHome className="text-mainColor" />
                                     <span className="text-sm">Inicio</span>{" "}
                                  </Link>
                               </div>
@@ -77,7 +96,7 @@ const LeftBar = () => {
                                     href="/ndocs"
                                     className="text-black font-light flex items-center justify-start flex-row gap-2 py-1 px-3 w-fit hover:bg-gray-200 duration-300 rounded-lg"
                                  >
-                                    <MdFolderCopy className="text-mainColor" />
+                                    <MdFileOpen className="text-mainColor" />
                                     <span className="text-sm">
                                        Documentación
                                     </span>{" "}
@@ -88,14 +107,13 @@ const LeftBar = () => {
                      </div>
 
                      <div className="w-full">
-                        <span className="text-sm font-semibold text-black">
-                           PANEL
-                        </span>
-                        <hr className="border-gray-300 my-2 mr-1" />
                         <div className="flex items-center justify-between gap-1 w-full px-3">
-                           <span className="text-sm mt-1 mb-1 text-black">
-                              Audidat 360
-                           </span>
+                           <div className="flex justify-center items-center gap-2">
+                              <MdFolderCopy className="text-mainColor" />
+                              <span className="text-sm mt-1 mb-1 text-black">
+                                 Audidat 360
+                              </span>
+                           </div>
                            <span
                               className="text-black cursor-pointer rounded-full text-xl hover:bg-gray-100 transition-colors duration-300 p-1"
                               onClick={() =>
@@ -161,9 +179,110 @@ const LeftBar = () => {
 
                      <div className="w-full">
                         <div className="flex items-center justify-between gap-1 w-full px-3">
-                           <span className="text-sm mt-1 mb-1 text-black">
-                              Mis herramientas
+                           <div className="flex justify-center items-center gap-2">
+                              <MdOutlineTransgender className="text-mainColor" />
+                              <span className="text-sm mt-1 mb-1 text-black">
+                                 Plan de igualdad
+                              </span>
+                           </div>
+                           <span
+                              className="text-black cursor-pointer rounded-full text-xl hover:bg-gray-100 transition-colors duration-300 p-1"
+                              onClick={() =>
+                                 setIsOpenPlanDeIgualdad(!isOpenPlanDeIgualdad)
+                              }
+                           >
+                              {isOpenPlanDeIgualdad ? (
+                                 <MdKeyboardArrowUp />
+                              ) : (
+                                 <MdKeyboardArrowDown />
+                              )}
                            </span>
+                        </div>
+                        {isOpenPlanDeIgualdad && (
+                           <div>
+                              <div className="mx-4 my-2">
+                                 <Link
+                                    href="/docs"
+                                    className="text-black font-light flex items-center justify-start flex-row gap-2 py-1 px-3 w-fit hover:bg-gray-200 duration-300 rounded-lg"
+                                 >
+                                    <MdFileOpen />
+                                    <span className="text-sm ">
+                                       Documentación
+                                    </span>{" "}
+                                 </Link>
+                              </div>
+                              <div className="mx-4 my-2">
+                                 <Link
+                                    href="/ndocs"
+                                    className="text-black font-light flex items-center justify-start flex-row gap-2 py-1 px-3 w-fit hover:bg-gray-200 duration-300 rounded-lg"
+                                 >
+                                    <MdLightbulb />
+                                    <span className="text-sm">
+                                       Implantación
+                                    </span>{" "}
+                                 </Link>
+                              </div>
+                           </div>
+                        )}
+                     </div>
+
+                     <div className="w-full">
+                        <div className="flex items-center justify-between gap-1 w-full px-3">
+                           <div className="flex justify-center items-center gap-2">
+                              <MdLibraryAddCheck className="text-mainColor" />
+                              <span className="text-sm mt-1 mb-1 text-black">
+                                 Compliance
+                              </span>
+                           </div>
+                           <span
+                              className="text-black cursor-pointer rounded-full text-xl hover:bg-gray-100 transition-colors duration-300 p-1"
+                              onClick={() =>
+                                 setIsOpenCompliance(!isOpenCompliance)
+                              }
+                           >
+                              {isOpenCompliance ? (
+                                 <MdKeyboardArrowUp />
+                              ) : (
+                                 <MdKeyboardArrowDown />
+                              )}
+                           </span>
+                        </div>
+                        {isOpenCompliance && (
+                           <div>
+                              <div className="mx-4 my-2">
+                                 <Link
+                                    href="/docs"
+                                    className="text-black font-light flex items-center justify-start flex-row gap-2 py-1 px-3 w-fit hover:bg-gray-200 duration-300 rounded-lg"
+                                 >
+                                    <MdFileOpen />
+                                    <span className="text-sm ">
+                                       Documentación
+                                    </span>{" "}
+                                 </Link>
+                              </div>
+                              <div className="mx-4 my-2">
+                                 <Link
+                                    href="/ndocs"
+                                    className="text-black font-light flex items-center justify-start flex-row gap-2 py-1 px-3 w-fit hover:bg-gray-200 duration-300 rounded-lg"
+                                 >
+                                    <MdLightbulb />
+                                    <span className="text-sm">
+                                       Implantación
+                                    </span>{" "}
+                                 </Link>
+                              </div>
+                           </div>
+                        )}
+                     </div>
+
+                     <div className="w-full">
+                        <div className="flex items-center justify-between gap-1 w-full px-3">
+                           <div className="flex justify-center items-center gap-2">
+                              <MdConstruction className="text-mainColor" />
+                              <span className="text-sm mt-1 mb-1 text-black">
+                                 Mis herramientas
+                              </span>
+                           </div>
                            <span
                               className="text-black cursor-pointer rounded-full text-xl hover:bg-gray-100 transition-colors duration-300 p-1"
                               onClick={() =>
@@ -207,9 +326,12 @@ const LeftBar = () => {
 
                      <div className="w-full">
                         <div className="flex items-center justify-between gap-1 w-full px-3">
-                           <span className="text-sm mt-1 mb-1 text-black">
-                              Seguimiento de cumplimiento
-                           </span>
+                           <div className="flex justify-center items-center gap-2">
+                              <MdLocationOn className="text-mainColor" />
+                              <span className="text-sm mt-1 mb-1 text-black">
+                                 Seguimiento de cumplimiento
+                              </span>
+                           </div>
                            <span
                               className="text-black cursor-pointer rounded-full text-xl hover:bg-gray-100 transition-colors duration-300 p-1"
                               onClick={() =>
