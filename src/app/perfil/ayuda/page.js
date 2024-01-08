@@ -15,10 +15,10 @@ export default function Perfil_Ayuda() {
                     <div className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
                         <h2 className="text-xl font-bold mb-4">Preguntas Frecuentes</h2>
                         <p className="mb-2"><strong>¿Cómo puedo cambiar mi contraseña?</strong></p>
-                        <p className="mb-4 ml-5">Para cambiar tu contraseña, ve a la configuración de tu perfil y selecciona 'Cambiar contraseña'.</p>
+                        <p className="mb-4 ml-5">Para cambiar tu contraseña, ve a la configuración de tu perfil y selecciona Cambiar contraseña.</p>
 
                         <p className="mb-2"><strong>¿Dónde puedo ver mi documentación?</strong></p>
-                        <p className="mb-4 ml-5">Puedes encontrar toda tu documentación en la sección 'Audidat 360'.</p>
+                        <p className="mb-4 ml-5">Puedes encontrar toda tu documentación en la sección Audidat 360.</p>
 
                         <h2 className="text-xl font-bold mt-6 mb-4">Soporte Técnico</h2>
                         <p className="mb-2">Si tienes problemas técnicos o preguntas, no dudes en contactarnos:</p>
