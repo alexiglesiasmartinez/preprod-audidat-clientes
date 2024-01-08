@@ -1,6 +1,7 @@
 import React from "react";
 import { MdAddCircleOutline, MdPendingActions, MdCheckCircle } from "react-icons/md";
 import Image from "next/image";
+import Link from "next/link";
 
 
 export default function Tickets() {
@@ -9,18 +10,24 @@ export default function Tickets() {
          <div className="pl-16 pr-16 py-7 flex flex-col justify-start items-center gap-5 min-h-[83vh]">
             <h1 className="text-2xl font-bold text-center">SISTEMA DE REPORTES</h1>
             <div className="flex items-center gap-3">
-               <div className="flex flex-col justify-center items-center gap-4 h-72- w-72 rounded-3xl border border-gray-200 shadow-lg p-5 m-5 hover:scale-105 transition-transform duration-300 ease-in-out cursor-pointer">
-                  <Image src="/ticketSystemAdd.png" width={150} height={150} alt="doc" />
-                  <span className="text-lg">Nueva consulta</span>
-               </div>
-               <div className="flex flex-col justify-center items-center gap-4 h-72- w-72 rounded-3xl border border-gray-200 shadow-lg p-5 m-5 hover:scale-105 transition-transform duration-300 ease-in-out cursor-pointer">
-                  <Image src="/ticketSystemPending.png" width={150} height={150} alt="doc" />
-                  <span className="text-lg">Consultas pendientes</span>
-               </div>
-               <div className="flex flex-col justify-center items-center gap-4 h-72- w-72 rounded-3xl border border-gray-200 shadow-lg p-5 m-5 hover:scale-105 transition-transform duration-300 ease-in-out cursor-pointer">
-                  <Image src="/ticketSystemClosed.png" width={150} height={150} alt="doc" />
-                  <span className="text-lg">Consultas cerradas</span>
-               </div>
+               <Link href="/tickets/nueva">
+                  <div className="flex flex-col justify-center items-center gap-4 h-72- w-72 rounded-3xl border border-gray-200 shadow-lg p-5 m-5 hover:scale-105 transition-transform duration-300 ease-in-out cursor-pointer">
+                     <Image src="/ticketSystemAdd.png" width={150} height={150} alt="doc" />
+                     <span className="text-lg">Nueva consulta</span>
+                  </div>
+               </Link>
+               <Link href="/tickets/pendientes">
+                  <div className="flex flex-col justify-center items-center gap-4 h-72- w-72 rounded-3xl border border-gray-200 shadow-lg p-5 m-5 hover:scale-105 transition-transform duration-300 ease-in-out cursor-pointer">
+                     <Image src="/ticketSystemPending.png" width={150} height={150} alt="doc" />
+                     <span className="text-lg">Consultas pendientes</span>
+                  </div>
+               </Link>
+               <Link href="/tickets/cerrados">
+                  <div className="flex flex-col justify-center items-center gap-4 h-72- w-72 rounded-3xl border border-gray-200 shadow-lg p-5 m-5 hover:scale-105 transition-transform duration-300 ease-in-out cursor-pointer">
+                     <Image src="/ticketSystemClosed.png" width={150} height={150} alt="doc" />
+                     <span className="text-lg">Consultas cerradas</span>
+                  </div>
+               </Link>
             </div>
             <div className="w-full mt-5">
                <h2 className="text-xl font-semibold text-center mb-5">Preguntas Frecuentes</h2>

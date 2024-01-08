@@ -35,7 +35,7 @@ const RightBar = () => {
       <>
          {visible ? (
             <aside
-               className={`fixed top-10 right-0 pt-10 w-[15%] h-screen text-white p-5 z-10 transition-opacity ${
+               className={`fixed top-20 right-0 pt-10 w-[15%] h-screen text-white p-5 z-10 transition-opacity ${
                   visible ? "opacity-100" : "opacity-0"
                }`}
             >
@@ -52,22 +52,22 @@ const RightBar = () => {
                               />
                               <div className="flex flex-col gap-1">
                                  <p className="text-base font-semibold text-black">
-                                    Conecta con tu gestor
+                                    Tu gestor
                                  </p>
                                  <p className="text-sm font-normal text-black">
                                     Daniel González
                                  </p>
                                  <p className="text-sm font-normal text-black">
-                                    Lu-Vi de 9:00h a 17:00h
+                                    L-V 9:00h - 17:00h
                                  </p>
                               </div>
                            </div>
                            <div className="flex gap-2">
                               <div
-                                 className="flex flex-col justify-center items-center text-center bg-mainGradient text-white rounded-full p-3"
+                                 className="flex flex-col justify-center items-center text-center bg-mainGradient text-white rounded-full p-2"
                                  onClick={openModal2}
                               >
-                                 <MdPhone size={20} className="text-white" />
+                                 <MdPhone size={15} className="text-white" />
                               </div>
                               <PopupContactaGestorPersonalLlamada
                                  isOpen={modalIsOpen2}
@@ -75,10 +75,10 @@ const RightBar = () => {
                               />
 
                               <div
-                                 className="flex flex-col justify-center items-center text-center bg-mainGradient text-white rounded-full p-3"
+                                 className="flex flex-col justify-center items-center text-center bg-mainGradient text-white rounded-full p-2"
                                  onClick={openModal3}
                               >
-                                 <MdEmail size={20} className="text-white" />
+                                 <MdEmail size={15} className="text-white" />
                               </div>
                               <PopupContactaGestorPersonalEmail
                                  isOpen={modalIsOpen3}
