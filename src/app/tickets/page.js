@@ -11,20 +11,20 @@ export default function Tickets() {
             <h1 className="text-2xl font-bold text-center">SISTEMA DE REPORTES</h1>
             <div className="flex items-center gap-3">
                <Link href="/tickets/nueva">
-                  <div className="flex flex-col justify-center items-center gap-4 h-72- w-72 rounded-3xl border border-gray-200 shadow-lg p-5 m-5 hover:scale-105 transition-transform duration-300 ease-in-out cursor-pointer">
-                     <Image src="/ticketSystemAdd.png" width={150} height={150} alt="doc" />
+                  <div className="flex flex-col justify-center items-center gap-4 h-52 w-60 rounded-3xl border border-gray-200 shadow-lg p-4 m-2 hover:scale-105 transition-transform duration-300 ease-in-out cursor-pointer">
+                     <Image src="/ticketSystemAdd.png" width={80} height={80} alt="doc" />
                      <span className="text-lg">Nueva consulta</span>
                   </div>
                </Link>
                <Link href="/tickets/pendientes">
-                  <div className="flex flex-col justify-center items-center gap-4 h-72- w-72 rounded-3xl border border-gray-200 shadow-lg p-5 m-5 hover:scale-105 transition-transform duration-300 ease-in-out cursor-pointer">
-                     <Image src="/ticketSystemPending.png" width={150} height={150} alt="doc" />
-                     <span className="text-lg">Consultas pendientes</span>
+                  <div className="flex flex-col justify-center items-center gap-4 h-52 w-60 rounded-3xl border border-gray-200 shadow-lg p-4 m-2 hover:scale-105 transition-transform duration-300 ease-in-out cursor-pointer">
+                     <Image src="/ticketSystemPending.png" width={80} height={80} alt="doc" />
+                     <span className="text-lg text-center">Consultas pendientes</span>
                   </div>
                </Link>
                <Link href="/tickets/cerrados">
-                  <div className="flex flex-col justify-center items-center gap-4 h-72- w-72 rounded-3xl border border-gray-200 shadow-lg p-5 m-5 hover:scale-105 transition-transform duration-300 ease-in-out cursor-pointer">
-                     <Image src="/ticketSystemClosed.png" width={150} height={150} alt="doc" />
+                  <div className="flex flex-col justify-center items-center gap-4 h-52 w-60 rounded-3xl border border-gray-200 shadow-lg p-4 m-2 hover:scale-105 transition-transform duration-300 ease-in-out cursor-pointer">
+                     <Image src="/ticketSystemClosed.png" width={80} height={80} alt="doc" />
                      <span className="text-lg">Consultas cerradas</span>
                   </div>
                </Link>

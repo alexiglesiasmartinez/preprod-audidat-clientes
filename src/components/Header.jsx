@@ -91,7 +91,10 @@ const Header = () => {
 
                      {dropdownVisible && (
                         <div className="text-left text-sm absolute right-5 mt-14 w-48 bg-white rounded-lg shadow-xl z-20">
-                           <Link href="#" className="rounded-lg">
+                           <Link
+                              href="/perfil/configuracion"
+                              className="rounded-lg"
+                           >
                               <span className="block px-4 py-2 text-gray-800 hover:bg-gray-100 rounded-t-lg">
                                  <MdOutlineSettings
                                     size={20}
@@ -100,7 +103,7 @@ const Header = () => {
                                  Configuración
                               </span>
                            </Link>
-                           <Link href="#">
+                           <Link href="/perfil/datos">
                               <span className="block px-4 py-2 text-gray-800 hover:bg-gray-100">
                                  <MdPersonOutline
                                     size={20}
@@ -109,7 +112,7 @@ const Header = () => {
                                  Perfil
                               </span>
                            </Link>
-                           <Link href="#">
+                           <Link href="/perfil/ayuda">
                               <span className="block px-4 py-2 text-gray-800 hover:bg-gray-100">
                                  <MdHelpOutline
                                     size={20}

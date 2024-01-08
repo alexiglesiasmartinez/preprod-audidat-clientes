@@ -35,7 +35,7 @@ const RightBar = () => {
       <>
          {visible ? (
             <aside
-               className={`fixed top-20 right-0 pt-10 w-[15%] h-screen text-white p-5 z-10 transition-opacity ${
+               className={`fixed top-20 right-0 pt-10 w-[18%] h-screen text-white p-5 z-10 transition-opacity ${
                   visible ? "opacity-100" : "opacity-0"
                }`}
             >
@@ -107,19 +107,6 @@ const RightBar = () => {
                            </p>
                         </div>
                      </div>
-                     <div className="flex items-center gap-2">
-                        <div>
-                           <MdOutlineTaskAlt size={20} className="text-black" />
-                        </div>
-                        <div>
-                           <p className="text-sm font-medium text-black">
-                              Tarea completada
-                           </p>
-                           <p className="text-xs text-gray-600">
-                              Hace 1 minuto
-                           </p>
-                        </div>
-                     </div>
                   </div>
                   <div className="font-light flex items-center justify-start flex-col gap-6 bg-gray-50 w-full mt-2 py-5 px-3 rounded-xl shadow">
                      <div className="flex items-center gap-2">
@@ -136,20 +123,6 @@ const RightBar = () => {
                            <p className="text-xs text-gray-600">
                               Hace 20 minutos
                            </p>
-                        </div>
-                     </div>
-                     <div className="flex items-center gap-2">
-                        <div>
-                           <MdOutlineDownloadForOffline
-                              size={22}
-                              className="text-black"
-                           />
-                        </div>
-                        <div>
-                           <p className="text-sm font-medium text-black">
-                              Fichero descargado
-                           </p>
-                           <p className="text-xs text-gray-600">Hace 2 días</p>
                         </div>
                      </div>
                   </div>
