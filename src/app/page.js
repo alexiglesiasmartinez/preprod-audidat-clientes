@@ -5,7 +5,8 @@ import TareasSummary2 from "@/components/TareasSummary2";
 import TareasSummary3 from "@/components/TareasSummary3";
 import TareasSummary4 from "@/components/TareasSummary4";
 import React, { useState, useEffect } from 'react';
-import Tour from 'reactour';
+import dynamic from 'next/dynamic';
+const Tour = dynamic(() => import('reactour'), { ssr: false });
 
 import {
   MdShield,
@@ -19,7 +20,9 @@ export default function Home() {
   const [isTourOpen, setIsTourOpen] = useState(true);
 
   useEffect(() => {
-    setIsTourOpen(true);
+    if (window.location.pathname === "/") {
+      setIsTourOpen(true);
+    }
     return () => setIsTourOpen(false);
   }, []);
 
