@@ -36,7 +36,7 @@ const Header = () => {
 
    return (
       <>
-         <div className="fixed flex items-center justify-center bg-gray-50 text-mainColor text-center top-0 left-0 h-10 w-full z-20 py-2 px-5 shadow bg-mainGradient">
+         <div className="fixed flex items-center justify-center bg-gray-50 text-mainColor text-center top-0 left-0 h-10 w-full z-20 py-2 px-5 shadow bg-mainColor">
             <div className="flex gap-2 justify-center items-center text-white">
                <MdOutlineMessage size={20} />
                <span className="flex justify-center items-center text-base text-white font-light">
@@ -81,7 +81,7 @@ const Header = () => {
                               </span>
                            </div>
                            <div
-                              className="rounded-full bg-secondaryGradient w-fit text-mainColor p-2 cursor-pointer"
+                              className="rounded-full bg-mainGradient w-fit text-mainColor p-2 cursor-pointer"
                               onClick={toggleDropdown}
                            >
                               <MdPersonOutline className="text-2xl text-white" />

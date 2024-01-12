@@ -9,7 +9,7 @@ const CustomModal = ({ isOpen, onRequestClose }) => {
          onRequestClose={onRequestClose}
          style={{
             overlay: {
-               backgroundColor: "rgba(0, 0, 0, 0.90)",
+               backgroundColor: "rgba(0, 0, 0, 0.75)",
                zIndex: "50",
             },
             content: {

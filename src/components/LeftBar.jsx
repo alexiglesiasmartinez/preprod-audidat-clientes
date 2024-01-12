@@ -398,7 +398,7 @@ const LeftBar = () => {
                         Invita a una empresa
                      </span>
                      <p
-                        className="font-light flex items-center justify-center flex-row gap-2 bg-mainColor2 w-full py-3 hover:bg-mainColor3 transition-colors duration-300 rounded-lg cursor-pointer"
+                        className="font-light flex items-center justify-center flex-row gap-2 bg-mainColor w-full py-3 hover:bg-mainColor3 transition-colors duration-300 rounded-lg cursor-pointer"
                         onClick={openModal}
                      >
                         <MdOutlineCardGiftcard />
@@ -416,7 +416,7 @@ const LeftBar = () => {
                   onClick={toggleVisibility}
                   className="toggle-button fixed bottom-3"
                >
-                  <div className="flex items-center justify-center bg-mainGradient rounded-full">
+                  <div className="flex items-center justify-center bg-mainColor hover:bg-mainColor2 transition-colors duration-300 rounded-full">
                      <MdArrowLeft size={22} className="text-white" />
                   </div>
                </button>
@@ -426,7 +426,7 @@ const LeftBar = () => {
                onClick={toggleVisibility}
                className="toggle-button fixed top-1/2 left-2 z-50 shadow-black"
             >
-               <div className="flex items-center justify-center bg-secondaryGradient rounded-full">
+               <div className="flex items-center justify-center bg-mainColor hover:bg-mainColor2 transition-colors duration-300 rounded-full">
                   <MdArrowRight size={22} className="text-white" />
                </div>
             </button>

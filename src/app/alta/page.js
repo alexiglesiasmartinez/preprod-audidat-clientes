@@ -7,7 +7,7 @@ export default function AltaCliente() {
         <>
             <div className="pl-16 pr-16 py-7 flex flex-col justify-start items-center gap-5 min-h-[83vh]">
                 <h1 className="text-2xl font-bold text-center">Alta de Cliente</h1>
-                <Link className="hover:scale-125 transition-transform duration-300 ease-in-out" href="/tickets">
+                <Link className="hover:scale-125 transition-transform duration-300 ease-in-out" href="/">
                     <MdOutlineArrowCircleLeft size={40} />
                 </Link>
                 <div className="w-full max-w-lg">

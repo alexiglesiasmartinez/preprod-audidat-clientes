@@ -10,7 +10,7 @@ const TareasSummary1 = () => {
       datasets: [
          {
             data: [80, 20],
-            backgroundColor: ["#020024", "transparent"],
+            backgroundColor: ["#00375e", "transparent"],
             borderWidth: 0,
             borderRadius: 10,
          },

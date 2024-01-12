@@ -13,7 +13,7 @@ import {
 } from "react-icons/md";
 import CustomModal from "@/components/PopupSolicitaAuditoria";
 import PopupContactaGestorPersonalLlamada from "@/components/PopupContactaGestorPersonalLlamada";
-import PopupContactaGestorPersonalEmail from "@/components/PopupContactaGestorPersonalEmail";
+import Link from "next/link";
 
 const RightBar = () => {
    const [visible, setVisible] = useState(true);
@@ -73,17 +73,14 @@ const RightBar = () => {
                                  isOpen={modalIsOpen2}
                                  onRequestClose={closeModal2}
                               />
-
-                              <div
-                                 className="flex flex-col justify-center items-center text-center bg-mainGradient text-white rounded-full p-2"
-                                 onClick={openModal3}
-                              >
-                                 <MdEmail size={15} className="text-white" />
-                              </div>
-                              <PopupContactaGestorPersonalEmail
-                                 isOpen={modalIsOpen3}
-                                 onRequestClose={closeModal3}
-                              />
+                              <Link href="/tickets">
+                                 <div
+                                    className="flex flex-col justify-center items-center text-center bg-mainGradient text-white rounded-full p-2"
+                                    onClick={openModal3}
+                                 >
+                                    <MdEmail size={15} className="text-white" />
+                                 </div>
+                              </Link>
                            </div>
                         </div>
                      </div>
@@ -126,7 +123,7 @@ const RightBar = () => {
                         </div>
                      </div>
                   </div>
-                  <div className="font-light flex items-center justify-start flex-col gap-2 bg-red-100 w-full mt-2 py-5 px-3 rounded-xl shadow">
+                  <div className="font-light flex items-center justify-start flex-col gap-2 bg-orange-100 w-full mt-2 py-5 px-3 rounded-xl shadow">
                      <MdOutlineWarningAmber size={22} className="text-black" />
                      <p className="text-base text-black font-bold">
                         Evita sanciones
@@ -134,7 +131,7 @@ const RightBar = () => {
 
                      <button
                         onClick={openModal}
-                        className="flex justify-center items-center gap-2 bg-mainGradient py-1 px-3 rounded-md text-white text- font-light shadow-sm"
+                        className="flex justify-center items-center gap-2 bg-mainColor hover:bg-mainColor2 transition-colors duration-300 py-1 px-3 rounded-md text-white text- font-light shadow-sm"
                      >
                         <MdFactCheck size={18} className="text-white" />
                         <span>Solicitar auditoría</span>
@@ -149,7 +146,7 @@ const RightBar = () => {
                   onClick={toggleVisibility}
                   className="toggle-button fixed bottom-3 right-5"
                >
-                  <div className="flex items-center justify-center bg-mainGradient rounded-full">
+                  <div className="flex items-center justify-center bg-mainColor hover:bg-mainColor2 transition-colors duration-300 rounded-full">
                      <MdArrowRight size={22} className="text-white" />
                   </div>
                </button>
@@ -159,7 +156,7 @@ const RightBar = () => {
                onClick={toggleVisibility}
                className="toggle-button fixed top-1/2 right-2 z-50 shadow-black"
             >
-               <div className="flex items-center justify-center bg-secondaryGradient rounded-full">
+               <div className="flex items-center justify-center bg-mainColor hover:bg-mainColor2 transition-colors duration-300 rounded-full">
                   <MdArrowLeft size={22} className="text-white" />
                </div>
             </button>
