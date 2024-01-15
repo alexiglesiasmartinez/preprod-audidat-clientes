@@ -151,7 +151,7 @@ const LeftBar = () => {
                                  </span>
                               </div>
                               <span
-                                 className="cursor-pointer rounded-full text-xl hover:bg-gray-100 transition-colors duration-300 p-1"
+                                 className="text-black cursor-pointer rounded-full text-xl hover:bg-gray-100 transition-colors duration-300 p-1"
                                  onClick={() =>
                                     setIsOpenAudidat360(!isOpenAudidat360)
                                  }
