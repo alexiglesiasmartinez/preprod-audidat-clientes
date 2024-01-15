@@ -151,7 +151,7 @@ const LeftBar = () => {
                                  </span>
                               </div>
                               <span
-                                 className="text-black cursor-pointer rounded-full text-xl hover:bg-gray-100 transition-colors duration-300 p-1"
+                                 className="cursor-pointer rounded-full text-xl hover:bg-gray-100 transition-colors duration-300 p-1"
                                  onClick={() =>
                                     setIsOpenAudidat360(!isOpenAudidat360)
                                  }
@@ -171,7 +171,7 @@ const LeftBar = () => {
                                        href="/docs"
                                        className="text-black font-light flex items-center justify-start flex-row gap-2 py-1 px-3 w-fit hover:bg-gray-200 duration-300 rounded-lg"
                                     >
-                                       <MdShield />
+                                       <MdShield className="text-mainColor" />
                                        <span className="text-sm ">
                                           Protección de datos
                                        </span>{" "}
@@ -182,7 +182,7 @@ const LeftBar = () => {
                                        href="/ndocs"
                                        className="text-black font-light flex items-center justify-start flex-row gap-2 py-1 px-3 w-fit hover:bg-gray-200 duration-300 rounded-lg"
                                     >
-                                       <MdGroups2 />
+                                       <MdGroups2 className="text-mainColor" />
                                        <span className="text-sm">
                                           Compliance
                                        </span>{" "}
@@ -193,10 +193,8 @@ const LeftBar = () => {
                                        href="/ndocs"
                                        className="text-black font-light flex items-center justify-start flex-row gap-2 py-1 px-3 w-fit hover:bg-gray-200 duration-300 rounded-lg"
                                     >
-                                       <MdOutlineTransgender />
-                                       <span className="text-sm">
-                                          Igualdad
-                                       </span>{" "}
+                                       <MdOutlineTransgender className="text-mainColor" />
+                                       <span className="text-sm">Igualdad</span>{" "}
                                     </Link>
                                  </div>
                                  <div className="mx-4 my-2">
@@ -204,7 +202,7 @@ const LeftBar = () => {
                                        href="/ndocs"
                                        className="text-black font-light flex items-center justify-start flex-row gap-2 py-1 px-3 w-fit hover:bg-gray-200 duration-300 rounded-lg"
                                     >
-                                       <MdSpatialAudioOff />
+                                       <MdSpatialAudioOff className="text-mainColor" />
                                        <span className="text-sm">
                                           Canal ético
                                        </span>{" "}
@@ -243,7 +241,7 @@ const LeftBar = () => {
                                     href="#"
                                     className="text-black font-light flex items-center justify-start flex-row gap-2 py-1 px-3 w-fit hover:bg-gray-200 duration-300 rounded-lg"
                                  >
-                                    <MdFileOpen />
+                                    <MdFileOpen className="text-mainColor" />
                                     <span className="text-sm ">
                                        Documentación
                                     </span>{" "}
@@ -254,7 +252,7 @@ const LeftBar = () => {
                                     href="#"
                                     className="text-black font-light flex items-center justify-start flex-row gap-2 py-1 px-3 w-fit hover:bg-gray-200 duration-300 rounded-lg"
                                  >
-                                    <MdLightbulb />
+                                    <MdLightbulb className="text-mainColor" />
                                     <span className="text-sm">
                                        Implantación
                                     </span>{" "}
@@ -292,7 +290,7 @@ const LeftBar = () => {
                                     href="#"
                                     className="text-black font-light flex items-center justify-start flex-row gap-2 py-1 px-3 w-fit hover:bg-gray-200 duration-300 rounded-lg"
                                  >
-                                    <MdFileOpen />
+                                    <MdFileOpen className="text-mainColor" />
                                     <span className="text-sm ">
                                        Documentación
                                     </span>{" "}
@@ -303,7 +301,7 @@ const LeftBar = () => {
                                     href="#"
                                     className="text-black font-light flex items-center justify-start flex-row gap-2 py-1 px-3 w-fit hover:bg-gray-200 duration-300 rounded-lg"
                                  >
-                                    <MdLightbulb />
+                                    <MdLightbulb className="text-mainColor" />
                                     <span className="text-sm">
                                        Implantación
                                     </span>{" "}
@@ -343,7 +341,7 @@ const LeftBar = () => {
                                     href="#"
                                     className="text-black font-light flex items-center justify-start flex-row gap-2 py-1 px-3 w-fit hover:bg-gray-200 duration-300 rounded-lg"
                                  >
-                                    <MdOutlineDraw />
+                                    <MdOutlineDraw className="text-mainColor" />
                                     <span className="text-sm">
                                        Generador de firmas
                                     </span>{" "}
@@ -354,7 +352,7 @@ const LeftBar = () => {
                                     href="/tareas"
                                     className="text-black font-light flex items-center justify-start flex-row gap-2 py-1 px-3 w-fit hover:bg-gray-200 duration-300 rounded-lg"
                                  >
-                                    <MdOutlineAddTask />
+                                    <MdOutlineAddTask className="text-mainColor" />
                                     <span className="text-sm">Tareas</span>{" "}
                                  </Link>
                               </div>
@@ -363,7 +361,7 @@ const LeftBar = () => {
                                     href="#"
                                     className="text-black font-light flex items-center justify-start flex-row gap-2 py-1 px-3 w-fit hover:bg-gray-200 duration-300 rounded-lg"
                                  >
-                                    <MdCookie />
+                                    <MdCookie className="text-mainColor" />
                                     <span className="text-sm">
                                        Cookies Web
                                     </span>{" "}
@@ -402,10 +400,8 @@ const LeftBar = () => {
                                  href="/acc"
                                  className="text-black font-light flex items-center justify-start flex-row gap-2 py-1 px-3 w-fit hover:bg-gray-200 duration-300 rounded-lg"
                               >
-                                 <MdSupervisedUserCircle />
-                                 <span className="text-sm">
-                                    Audidat CUMPLE
-                                 </span>{" "}
+                                 <MdSupervisedUserCircle className="text-mainColor" />
+                                 <span className="text-sm">Audidat CUMPLE</span>{" "}
                               </Link>
                            </div>
                         )}
@@ -437,7 +433,7 @@ const LeftBar = () => {
                         className="font-light flex items-center justify-center flex-row gap-2 bg-mainColor w-full py-3 hover:bg-mainColor3 transition-colors duration-300 rounded-lg cursor-pointer"
                         onClick={openModal}
                      >
-                        <MdOutlineCardGiftcard />
+                        <MdOutlineCardGiftcard className="text-mainColor" />
                         <span className="text-sm font-medium">
                            INVITAR
                         </span>{" "}
