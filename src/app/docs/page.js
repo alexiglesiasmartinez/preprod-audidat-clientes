@@ -1,24 +1,61 @@
+"use client";
+import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import Footer from "@/components/Footer";
+import dynamic from "next/dynamic";
+const Tour = dynamic(() => import("reactour"), { ssr: false });
 
 export default function Docs() {
+
+    const [isTourOpen, setIsTourOpen] = useState(true);
+
+    useEffect(() => {
+        if (window.location.pathname === "/docs") {
+            setIsTourOpen(true);
+        }
+        return () => setIsTourOpen(false);
+    }, []);
+
+    const steps = [
+        {
+            selector: ".div7",
+            content:
+                "Aquí puedes descargar tus documentos.",
+        },
+        {
+            selector: ".div8",
+            content:
+                "Recuerda que también dispones de un recurso adicional donde podrás subir tu propia documentación.",
+        },
+    ];
+
     return (
         <>
+            <Tour
+                steps={steps}
+                isOpen={isTourOpen}
+                onRequestClose={() => setIsTourOpen(false)}
+                accentColor="#00375e"
+                rounded={5}
+            />
             <div className="pl-16 pr-16 py-7 flex flex-col justify-start items-center gap-5 min-h-[83vh] h-auto">
+
                 <h1 className="text-2xl font-bold text-center">DOCUMENTACIÓN</h1>
                 <p><Link href="/ndocs" className="italic underline">Documentación</Link> / <Link href="/docs" className="italic underline">Protección de datos</Link></p>
                 <h3 className="text-lg font-bold text-center">Sistema de Cumplimiento Normativo</h3>
                 <p className="text-justify">Las diferentes ventanas que se presentan a continuación tienen como finalidad ayudarle con el cumplimiento de cada una de las distintas obligaciones recogidas en la normativa de protección de datos. En tal sentido, le invitamos a hacer clic sobre cada una de dichas ventanas, en las cuales se le explicará detenidamente cómo debe utilizar la documentación disponible, el sentido y utilidad de la misma, y a qué obligaciones normativas responde</p>
                 <div className="grid grid-cols-3 justify-center align-middle text-center gap-0">
-                    <Link href="/docs/politica_proteccion_datos">
-                        <div className="flex flex-col justify-center gap-3 h-60 w-60 rounded-3xl border border-gray-200 shadow-lg p-5 m-5 hover:scale-105 transition-transform duration-300 ease-in-out">
-                            <div className="border-8 rounded-full border-gray-500 w-[100px] mx-auto">
-                                <Image src="/ndocs1_1.png" className="mx-auto border-8 rounded-full border-mainColor p-2" width={100} height={100} alt="doc" />
+                    <div className="div7">
+                        <Link href="/docs/politica_proteccion_datos">
+                            <div className="flex flex-col justify-center gap-3 h-60 w-60 rounded-3xl border border-gray-200 shadow-lg p-5 m-5 hover:scale-105 transition-transform duration-300 ease-in-out">
+                                <div className="border-8 rounded-full border-gray-500 w-[100px] mx-auto">
+                                    <Image src="/ndocs1_1.png" className="mx-auto border-8 rounded-full border-mainColor p-2" width={100} height={100} alt="doc" />
+                                </div>
+                                <h1 className="text-mainColor font-bold text-sm">Política de protección de datos</h1>
                             </div>
-                            <h1 className="text-mainColor font-bold text-sm">Política de protección de datos</h1>
-                        </div>
-                    </Link>
+                        </Link>
+                    </div>
                     <Link href="/docs/registro_actividades">
                         <div className="flex flex-col justify-center gap-3 h-60 w-60 rounded-3xl border border-gray-200 shadow-lg p-5 m-5 hover:scale-105 transition-transform duration-300 ease-in-out">
                             <div className="border-8 rounded-full border-gray-500 w-[100px] mx-auto">
@@ -83,14 +120,16 @@ export default function Docs() {
                             <h1 className="text-mainColor font-bold text-sm">Evaluaciones de impacto relativa a la protección de datos (eipd)</h1>
                         </div>
                     </Link>
-                    <Link href="/docs/otra_documentacion">
-                        <div className="flex flex-col justify-center gap-3 h-60 w-60 rounded-3xl border border-gray-200 shadow-lg p-5 m-5 hover:scale-105 transition-transform duration-300 ease-in-out">
-                            <div className="border-8 rounded-full border-gray-500 w-[100px] mx-auto">
-                                <Image src="/ndocs1_10.png" className="mx-auto border-8 rounded-full border-mainColor p-2" width={100} height={100} alt="doc" />
+                    <div className="div8">
+                        <Link href="/docs/otra_documentacion">
+                            <div className="flex flex-col justify-center gap-3 h-60 w-60 rounded-3xl border border-gray-200 shadow-lg p-5 m-5 hover:scale-105 transition-transform duration-300 ease-in-out">
+                                <div className="border-8 rounded-full border-gray-500 w-[100px] mx-auto">
+                                    <Image src="/ndocs1_10.png" className="mx-auto border-8 rounded-full border-mainColor p-2" width={100} height={100} alt="doc" />
+                                </div>
+                                <h1 className="text-mainColor font-bold text-sm">Otra documentación</h1>
                             </div>
-                            <h1 className="text-mainColor font-bold text-sm">Otra documentación</h1>
-                        </div>
-                    </Link>
+                        </Link>
+                    </div>
                 </div>
             </div>
             <Footer />

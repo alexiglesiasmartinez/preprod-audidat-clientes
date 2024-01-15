@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import {
    MdDashboard,
@@ -27,6 +27,8 @@ import {
    MdAddCircle,
 } from "react-icons/md";
 import CustomModal from "@/components/PopupInvitaEmpresa";
+import dynamic from "next/dynamic";
+const Tour = dynamic(() => import("reactour"), { ssr: false });
 
 const LeftBar = () => {
    const [visible, setVisible] = useState(true);
@@ -44,8 +46,39 @@ const LeftBar = () => {
    const [isSeguimientoCumplimiento, setIsSeguimientoCumplimiento] =
       useState(false);
 
+   const [isTourOpen, setIsTourOpen] = useState(true);
+
+   useEffect(() => {
+      if (window.location.pathname === "/ndocs") {
+         setIsTourOpen(true);
+         setIsOpenAudidat360(true);
+      }
+      return () => setIsTourOpen(false);
+   }, []);
+
+   const steps = [
+      {
+         selector: ".div6",
+         content:
+            "Aquí puedes ver tu sección para acceder a tu documentación. Haz click en Protección de Datos para comenzar a mejorar tu cumplimiento normativo.",
+      },
+   ];
+
+   const handleDiv6Click = () => {
+      setIsTourOpen(false);
+   };
+
    return (
       <>
+         <Tour
+            steps={steps}
+            isOpen={isTourOpen}
+            onRequestClose={() => setIsTourOpen(false)}
+            accentColor="#00375e"
+            rounded={5}
+            showButtons={false}
+            showNavigation={false}
+         />
          {visible ? (
             <aside className="fixed top-20 pt-10 pb-32 left-0 w-[17%] h-screen bg-gray-50 text-white p-4 z-10 shadow-2xl flex flex-col justify-between">
                <div className="flex-1 overflow-auto">
@@ -108,75 +141,78 @@ const LeftBar = () => {
                         )}
                      </div>
 
-                     <div className="w-full">
-                        <div className="flex items-center justify-between gap-1 w-full px-3">
-                           <div className="flex justify-center items-center gap-2">
-                              <MdFolderCopy className="text-mainColor" />
-                              <span className="text-sm mt-1 mb-1 text-black">
-                                 Audidat 360
+                     <div onClick={handleDiv6Click} className="div6 w-full">
+                        <div className="w-full">
+                           <div className="flex items-center justify-between gap-1 w-full px-3">
+                              <div className="flex justify-center items-center gap-2">
+                                 <MdFolderCopy className="text-mainColor" />
+                                 <span className="text-sm mt-1 mb-1 text-black">
+                                    Audidat 360
+                                 </span>
+                              </div>
+                              <span
+                                 className="text-black cursor-pointer rounded-full text-xl hover:bg-gray-100 transition-colors duration-300 p-1"
+                                 onClick={() =>
+                                    setIsOpenAudidat360(!isOpenAudidat360)
+                                 }
+                              >
+                                 {isOpenAudidat360 ? (
+                                    <MdKeyboardArrowUp />
+                                 ) : (
+                                    <MdKeyboardArrowDown />
+                                 )}
                               </span>
                            </div>
-                           <span
-                              className="text-black cursor-pointer rounded-full text-xl hover:bg-gray-100 transition-colors duration-300 p-1"
-                              onClick={() =>
-                                 setIsOpenAudidat360(!isOpenAudidat360)
-                              }
-                           >
-                              {isOpenAudidat360 ? (
-                                 <MdKeyboardArrowUp />
-                              ) : (
-                                 <MdKeyboardArrowDown />
-                              )}
-                           </span>
+
+                           {isOpenAudidat360 && (
+                              <div>
+                                 <div className="mx-4 my-2">
+                                    <Link
+                                       href="/docs"
+                                       className="text-black font-light flex items-center justify-start flex-row gap-2 py-1 px-3 w-fit hover:bg-gray-200 duration-300 rounded-lg"
+                                    >
+                                       <MdShield />
+                                       <span className="text-sm ">
+                                          Protección de datos
+                                       </span>{" "}
+                                    </Link>
+                                 </div>
+                                 <div className="mx-4 my-2">
+                                    <Link
+                                       href="/ndocs"
+                                       className="text-black font-light flex items-center justify-start flex-row gap-2 py-1 px-3 w-fit hover:bg-gray-200 duration-300 rounded-lg"
+                                    >
+                                       <MdGroups2 />
+                                       <span className="text-sm">
+                                          Compliance
+                                       </span>{" "}
+                                    </Link>
+                                 </div>
+                                 <div className="mx-4 my-2">
+                                    <Link
+                                       href="/ndocs"
+                                       className="text-black font-light flex items-center justify-start flex-row gap-2 py-1 px-3 w-fit hover:bg-gray-200 duration-300 rounded-lg"
+                                    >
+                                       <MdOutlineTransgender />
+                                       <span className="text-sm">
+                                          Igualdad
+                                       </span>{" "}
+                                    </Link>
+                                 </div>
+                                 <div className="mx-4 my-2">
+                                    <Link
+                                       href="/ndocs"
+                                       className="text-black font-light flex items-center justify-start flex-row gap-2 py-1 px-3 w-fit hover:bg-gray-200 duration-300 rounded-lg"
+                                    >
+                                       <MdSpatialAudioOff />
+                                       <span className="text-sm">
+                                          Canal ético
+                                       </span>{" "}
+                                    </Link>
+                                 </div>
+                              </div>
+                           )}
                         </div>
-                        {isOpenAudidat360 && (
-                           <div>
-                              <div className="mx-4 my-2">
-                                 <Link
-                                    href="/docs"
-                                    className="text-black font-light flex items-center justify-start flex-row gap-2 py-1 px-3 w-fit hover:bg-gray-200 duration-300 rounded-lg"
-                                 >
-                                    <MdShield />
-                                    <span className="text-sm ">
-                                       Protección de datos
-                                    </span>{" "}
-                                 </Link>
-                              </div>
-                              <div className="mx-4 my-2">
-                                 <Link
-                                    href="/ndocs"
-                                    className="text-black font-light flex items-center justify-start flex-row gap-2 py-1 px-3 w-fit hover:bg-gray-200 duration-300 rounded-lg"
-                                 >
-                                    <MdGroups2 />
-                                    <span className="text-sm">
-                                       Compliance
-                                    </span>{" "}
-                                 </Link>
-                              </div>
-                              <div className="mx-4 my-2">
-                                 <Link
-                                    href="/ndocs"
-                                    className="text-black font-light flex items-center justify-start flex-row gap-2 py-1 px-3 w-fit hover:bg-gray-200 duration-300 rounded-lg"
-                                 >
-                                    <MdOutlineTransgender />
-                                    <span className="text-sm">
-                                       Igualdad
-                                    </span>{" "}
-                                 </Link>
-                              </div>
-                              <div className="mx-4 my-2">
-                                 <Link
-                                    href="/ndocs"
-                                    className="text-black font-light flex items-center justify-start flex-row gap-2 py-1 px-3 w-fit hover:bg-gray-200 duration-300 rounded-lg"
-                                 >
-                                    <MdSpatialAudioOff />
-                                    <span className="text-sm">
-                                       Canal ético
-                                    </span>{" "}
-                                 </Link>
-                              </div>
-                           </div>
-                        )}
                      </div>
 
                      <div className="w-full">

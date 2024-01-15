@@ -3,6 +3,9 @@
 import React, { useState, useRef, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import dynamic from "next/dynamic";
+const Tour = dynamic(() => import("reactour"), { ssr: false });
+import CustomModal from "@/components/PopupSolicitaAuditoria";
 
 import {
    MdOutlineNotificationsNone,
@@ -11,11 +14,39 @@ import {
    MdPersonOutline,
    MdOutlineSettings,
    MdOutlineMessage,
+   MdArrowOutward,
 } from "react-icons/md";
 
 const Header = () => {
    const [dropdownVisible, setDropdownVisible] = useState(false);
    const dropdownRef = useRef(null);
+
+   const [isTourOpen, setIsTourOpen] = useState(true);
+
+   const [modalIsOpen, setModalIsOpen] = useState(false);
+   const openModal = () => setModalIsOpen(true);
+   const closeModal = () => setModalIsOpen(false);
+
+   useEffect(() => {
+      if (window.location.pathname === "/") {
+         setIsTourOpen(true);
+         setDropdownVisible(true);
+      }
+      return () => setIsTourOpen(false);
+   }, []);
+
+   const steps = [
+      {
+         selector: ".div1",
+         content:
+            "Haz click en Configuración para configurar los avisos de tu proceso de cumplimiento.",
+      },
+   ];
+
+   const handleDiv1Click = () => {
+      setIsTourOpen(false);
+      setDropdownVisible(false);
+   };
 
    const toggleDropdown = () => {
       setDropdownVisible(!dropdownVisible);
@@ -34,8 +65,37 @@ const Header = () => {
       };
    }, []);
 
+   const [logo, setLogo] = useState("/logo-audidat-clientes.png");
+
+   const changeLogo = () => {
+      const root = document.documentElement;
+
+      if (logo === "/logo-eurocajarural.jpeg") {
+         setLogo("/logo-audidat-clientes.png");
+         root.style.setProperty("--mainGradient", "#00375e");
+         root.style.setProperty("--secondaryGradient", "#002c4b");
+         root.style.setProperty("--mainColor2", "#002c4b");
+         root.style.setProperty("--mainColor3", "#00375e");
+      } else {
+         setLogo("/logo-eurocajarural.jpeg");
+         root.style.setProperty("--mainGradient", "#2f7655");
+         root.style.setProperty("--secondaryGradient", "#2f7655");
+         root.style.setProperty("--mainColor2", "#2f7655");
+         root.style.setProperty("--mainColor3", "#2f7655");
+      }
+   };
+
    return (
       <>
+         <Tour
+            steps={steps}
+            isOpen={isTourOpen}
+            onRequestClose={() => setIsTourOpen(false)}
+            accentColor="#00375e"
+            rounded={5}
+            showButtons={false}
+            showNavigation={false}
+         />
          <div className="fixed flex items-center justify-center bg-gray-50 text-mainColor text-center top-0 left-0 h-10 w-full z-20 py-2 px-5 shadow bg-mainColor">
             <div className="flex gap-2 justify-center items-center text-white">
                <MdOutlineMessage size={20} />
@@ -51,7 +111,7 @@ const Header = () => {
                <div className="flex items-center gap-3">
                   <Link href="/">
                      <Image
-                        src="/logo-audidat-clientes.png"
+                        src={logo}
                         width={130}
                         height={40}
                         alt="Logo audidat"
@@ -59,15 +119,27 @@ const Header = () => {
                   </Link>
                </div>
                <div className="flex items-center justify-end gap-6">
+                  <div
+                     onClick={changeLogo}
+                     className="transition transform hover:scale-125"
+                  >
+                     <Link href="#">
+                        <MdArrowOutward size={20} />
+                     </Link>
+                  </div>
                   <div className="transition transform hover:scale-125">
                      <Link href="#">
                         <MdOutlineMessage size={20} />
                      </Link>
                   </div>
                   <div className="transition transform hover:scale-125">
-                     <Link href="#">
+                     <Link href="#" onClick={openModal}>
                         <MdOutlineNotificationsNone size={20} />
                      </Link>
+                     <CustomModal
+                        isOpen={modalIsOpen}
+                        onRequestClose={closeModal}
+                     />
                   </div>
                   <div
                      ref={dropdownRef}
@@ -91,18 +163,20 @@ const Header = () => {
 
                      {dropdownVisible && (
                         <div className="text-left text-sm absolute right-5 mt-14 w-48 bg-white rounded-lg shadow-xl z-20">
-                           <Link
-                              href="/perfil/configuracion"
-                              className="rounded-lg"
-                           >
-                              <span className="block px-4 py-2 text-gray-800 hover:bg-gray-100 rounded-t-lg">
-                                 <MdOutlineSettings
-                                    size={20}
-                                    className="inline mr-2"
-                                 />
-                                 Configuración
-                              </span>
-                           </Link>
+                           <div onClick={handleDiv1Click} className="div1">
+                              <Link
+                                 href="/perfil/configuracion"
+                                 className="rounded-lg"
+                              >
+                                 <span className="block px-4 py-2 text-gray-800 hover:bg-gray-100 rounded-t-lg">
+                                    <MdOutlineSettings
+                                       size={20}
+                                       className="inline mr-2"
+                                    />
+                                    Configuración
+                                 </span>
+                              </Link>
+                           </div>
                            <Link href="/perfil/datos">
                               <span className="block px-4 py-2 text-gray-800 hover:bg-gray-100">
                                  <MdPersonOutline

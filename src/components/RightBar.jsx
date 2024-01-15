@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import {
    MdOutlineTaskAlt,
@@ -14,6 +14,8 @@ import {
 import CustomModal from "@/components/PopupSolicitaAuditoria";
 import PopupContactaGestorPersonalLlamada from "@/components/PopupContactaGestorPersonalLlamada";
 import Link from "next/link";
+import dynamic from "next/dynamic";
+const Tour = dynamic(() => import("reactour"), { ssr: false });
 
 const RightBar = () => {
    const [visible, setVisible] = useState(true);
@@ -31,6 +33,24 @@ const RightBar = () => {
    const [modalIsOpen3, setModalIsOpen3] = useState(false);
    const openModal3 = () => setModalIsOpen3(true);
    const closeModal3 = () => setModalIsOpen3(false);
+
+   const [isTourOpen, setIsTourOpen] = useState(true);
+
+   useEffect(() => {
+      if (window.location.pathname === "/") {
+         setIsTourOpen(true);
+      }
+      return () => setIsTourOpen(false);
+   }, []);
+
+   const steps = [
+      {
+         selector: ".div1",
+         content:
+            "Haz click en Configuración para configurar los avisos de tu proceso de cumplimiento.",
+      },
+   ];
+
    return (
       <>
          {visible ? (
@@ -41,46 +61,51 @@ const RightBar = () => {
             >
                <div className="flex items-start justify-center flex-col gap-2 mt-0">
                   <div className="font-light flex items-center justify-start flex-col gap-6 bg-gray-50 w-full mt-2 py-5 px-3 rounded-xl shadow">
-                     <div className="font-light flex items-center justify-start flex-col gap-5 w-full py-0 px-3 hover:shadow-black transition-colors duration-300 rounded-xl cursor-pointer">
-                        <div className="flex items-center flex-col gap-4">
-                           <div className="flex justify-center items-center text-center flex-col">
-                              <Image
-                                 src="/asesorPersonalAudidat.png"
-                                 width={50}
-                                 height={50}
-                                 className="text-black"
-                              />
-                              <div className="flex flex-col gap-1">
-                                 <p className="text-base font-semibold text-black">
-                                    Tu gestor
-                                 </p>
-                                 <p className="text-sm font-normal text-black">
-                                    Daniel González
-                                 </p>
-                                 <p className="text-sm font-normal text-black">
-                                    L-V 9:00h - 17:00h
-                                 </p>
+                     <div className="div3">
+                        <div className="font-light flex items-center justify-start flex-col gap-5 w-full py-0 px-3 hover:shadow-black transition-colors duration-300 rounded-xl cursor-pointer">
+                           <div className="flex items-center flex-col gap-4">
+                              <div className="flex justify-center items-center text-center flex-col">
+                                 <Image
+                                    src="/asesorPersonalAudidat.png"
+                                    width={50}
+                                    height={50}
+                                    className="text-black"
+                                 />
+                                 <div className="flex flex-col gap-1">
+                                    <p className="text-base font-semibold text-black">
+                                       Tu gestor
+                                    </p>
+                                    <p className="text-sm font-normal text-black">
+                                       Daniel González
+                                    </p>
+                                    <p className="text-sm font-normal text-black">
+                                       L-V 9:00h - 17:00h
+                                    </p>
+                                 </div>
                               </div>
-                           </div>
-                           <div className="flex gap-2">
-                              <div
-                                 className="flex flex-col justify-center items-center text-center bg-mainGradient text-white rounded-full p-2"
-                                 onClick={openModal2}
-                              >
-                                 <MdPhone size={15} className="text-white" />
-                              </div>
-                              <PopupContactaGestorPersonalLlamada
-                                 isOpen={modalIsOpen2}
-                                 onRequestClose={closeModal2}
-                              />
-                              <Link href="/tickets">
+                              <div className="flex gap-2">
                                  <div
                                     className="flex flex-col justify-center items-center text-center bg-mainGradient text-white rounded-full p-2"
-                                    onClick={openModal3}
+                                    onClick={openModal2}
                                  >
-                                    <MdEmail size={15} className="text-white" />
+                                    <MdPhone size={15} className="text-white" />
                                  </div>
-                              </Link>
+                                 <PopupContactaGestorPersonalLlamada
+                                    isOpen={modalIsOpen2}
+                                    onRequestClose={closeModal2}
+                                 />
+                                 <Link href="/tickets">
+                                    <div
+                                       className="flex flex-col justify-center items-center text-center bg-mainGradient text-white rounded-full p-2"
+                                       onClick={openModal3}
+                                    >
+                                       <MdEmail
+                                          size={15}
+                                          className="text-white"
+                                       />
+                                    </div>
+                                 </Link>
+                              </div>
                            </div>
                         </div>
                      </div>
@@ -91,35 +116,42 @@ const RightBar = () => {
                      </span>
                   </div>
                   <div className="font-light flex items-center justify-start flex-col gap-4 bg-gray-50 w-full py-5 px-3 shadow rounded-xl">
-                     <div className="flex items-center gap-2">
-                        <div>
-                           <MdOutlineTaskAlt size={20} className="text-black" />
-                        </div>
-                        <div>
-                           <p className="text-sm font-medium text-black">
-                              Tarea completada
-                           </p>
-                           <p className="text-xs text-gray-600">
-                              Hace 2 segundos
-                           </p>
+                     <div className="div4">
+                        <div className="flex items-center gap-2">
+                           <div>
+                              <MdOutlineTaskAlt
+                                 size={20}
+                                 className="text-black"
+                              />
+                           </div>
+                           <div>
+                              <p className="text-sm font-medium text-black">
+                                 Tarea completada
+                              </p>
+                              <p className="text-xs text-gray-600">
+                                 Hace 2 segundos
+                              </p>
+                           </div>
                         </div>
                      </div>
                   </div>
                   <div className="font-light flex items-center justify-start flex-col gap-6 bg-gray-50 w-full mt-2 py-5 px-3 rounded-xl shadow">
-                     <div className="flex items-center gap-2">
-                        <div>
-                           <MdOutlineDownloadForOffline
-                              size={22}
-                              className="text-black"
-                           />
-                        </div>
-                        <div>
-                           <p className="text-sm font-medium text-black">
-                              Fichero descargado
-                           </p>
-                           <p className="text-xs text-gray-600">
-                              Hace 20 minutos
-                           </p>
+                     <div className="div5">
+                        <div className="flex items-center gap-2">
+                           <div>
+                              <MdOutlineDownloadForOffline
+                                 size={22}
+                                 className="text-black"
+                              />
+                           </div>
+                           <div>
+                              <p className="text-sm font-medium text-black">
+                                 Fichero descargado
+                              </p>
+                              <p className="text-xs text-gray-600">
+                                 Hace 20 minutos
+                              </p>
+                           </div>
                         </div>
                      </div>
                   </div>
