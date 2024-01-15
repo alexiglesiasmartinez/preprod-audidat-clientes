@@ -46,7 +46,7 @@ const LeftBar = () => {
    const [isSeguimientoCumplimiento, setIsSeguimientoCumplimiento] =
       useState(false);
 
-   const [isTourOpen, setIsTourOpen] = useState(true);
+   /*const [isTourOpen, setIsTourOpen] = useState(true);
 
    useEffect(() => {
       if (window.location.pathname === "/ndocs") {
@@ -66,11 +66,11 @@ const LeftBar = () => {
 
    const handleDiv6Click = () => {
       setIsTourOpen(false);
-   };
+   };*/
 
    return (
       <>
-         <Tour
+         {/*<Tour
             steps={steps}
             isOpen={isTourOpen}
             onRequestClose={() => setIsTourOpen(false)}
@@ -78,7 +78,7 @@ const LeftBar = () => {
             rounded={5}
             showButtons={false}
             showNavigation={false}
-         />
+         />*/}
          {visible ? (
             <aside className="fixed top-20 pt-10 pb-32 left-0 w-[17%] h-screen bg-gray-50 text-white p-4 z-10 shadow-2xl flex flex-col justify-between">
                <div className="flex-1 overflow-auto">
@@ -141,7 +141,7 @@ const LeftBar = () => {
                         )}
                      </div>
 
-                     <div onClick={handleDiv6Click} className="div6 w-full">
+                     <div /*onClick={handleDiv6Click}*/ className="div6 w-full">
                         <div className="w-full">
                            <div className="flex items-center justify-between gap-1 w-full px-3">
                               <div className="flex justify-center items-center gap-2">
