@@ -19,7 +19,7 @@ export default function RootLayout({ children }) {
         <Header />
         <div className='flex bg-white top-14'>
           <LeftBar />
-          <main className="flex-1 p-2 ml-[17%] mr-[17%] mt-[5.5rem]">
+          <main className="toHide_main flex-1 p-2 ml-[17%] mr-[17%] mt-[5.5rem]">
             {children}
           </main>
           <RightBar />

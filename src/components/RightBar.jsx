@@ -59,7 +59,7 @@ const RightBar = () => {
                   visible ? "opacity-100" : "opacity-0"
                }`}
             >
-               <div className="flex items-start justify-center flex-col gap-2 mt-0">
+               <div className="toHide flex items-start justify-center flex-col gap-2 mt-0">
                   <div className="font-light flex items-center justify-start flex-col gap-6 bg-gray-50 w-full mt-2 py-5 px-3 rounded-xl shadow">
                      <div className="div3">
                         <div className="font-light flex items-center justify-start flex-col gap-5 w-full py-0 px-3 hover:shadow-black transition-colors duration-300 rounded-xl cursor-pointer">
@@ -176,7 +176,7 @@ const RightBar = () => {
                </div>
                <button
                   onClick={toggleVisibility}
-                  className="toggle-button fixed bottom-3 right-5"
+                  className="toHide toggle-button fixed bottom-3 right-5"
                >
                   <div className="flex items-center justify-center bg-mainColor hover:bg-mainColor2 transition-colors duration-300 rounded-full">
                      <MdArrowRight size={22} className="text-white" />
@@ -186,7 +186,7 @@ const RightBar = () => {
          ) : (
             <button
                onClick={toggleVisibility}
-               className="toggle-button fixed top-1/2 right-2 z-50 shadow-black"
+               className="toHide toggle-button fixed top-1/2 right-2 z-50 shadow-black"
             >
                <div className="flex items-center justify-center bg-mainColor hover:bg-mainColor2 transition-colors duration-300 rounded-full">
                   <MdArrowLeft size={22} className="text-white" />

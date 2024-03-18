@@ -80,7 +80,7 @@ const LeftBar = () => {
             showNavigation={false}
          />*/}
          {visible ? (
-            <aside className="fixed top-20 pt-10 pb-32 left-0 w-[17%] h-screen bg-gray-50 text-white p-4 z-10 shadow-2xl flex flex-col justify-between">
+            <aside className="toHide fixed top-20 pt-10 pb-32 left-0 w-[17%] h-screen bg-gray-50 text-white p-4 z-10 shadow-2xl flex flex-col justify-between">
                <div className="flex-1 overflow-auto">
                   <div className="flex items-start justify-center flex-col gap-4">
                      <div className="flex items-center shadow-sm rounded-lg overflow-hidden bg-white w-full mb-2">
