@@ -3,7 +3,6 @@
 import '../globals.css';
 import './temporal.css';
 import { useEffect, useState } from 'react';
-import Link from 'next/link';
 
 export default function Login() {
     const [isMounted, setIsMounted] = useState(false);
@@ -31,7 +30,7 @@ export default function Login() {
                     <div className="flex items-center justify-between mb-6">
                         <a href="#" className="text-sm text-mainColor2 hover:underline">¿Olvidaste tu contraseña?</a>
                     </div>
-                    <Link href="https://preprod-audidat-clientes.vercel.app/" type="button" className="text-white bg-mainColor hover:bg-mainColor2 focus:ring-4 focus:outline-none focus:ring-mainColor2 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center">Iniciar sesión</Link>
+                    <button type="button" className="text-white bg-mainColor hover:bg-mainColor2 focus:ring-4 focus:outline-none focus:ring-mainColor2 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center">Iniciar sesión</button>
                 </form>
             </div>
         </div>
