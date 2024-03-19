@@ -59,7 +59,7 @@ export default function Home() {
         <h1 className="text-2xl font-bold text-center">INICIO</h1>
         <p className="text-center mb-4">Ten un control de las áreas clave de tu cumplimiento: Protección de Datos, Compliance, Igualdad y Canal Ético. Cada gráfico muestra el porcentaje de cumplimiento, proporcionándote una idea clara de tu progreso.</p>
         <div className="w-full">
-          <div className='grid lg:grid-cols-2 grid-cols-1 gap-4 justify-center items-start mb-4 ml-4 mr-4 h-fit w-full'>
+          <div className='grid lg:grid-cols-2 grid-cols-1 gap-4 justify-center items-start h-fit w-full'>
             <div className="flex justify-between items-center gap-4 bg-white rounded-2xl p-12 shadow-md hover:shadow-lg transition duration-300">
               <div className="flex flex-col justify-center items-center gap-3 w-3/6">
                 <div className="flex justify-center text-white bg-mainColor w-fit p-3 rounded-full">
@@ -99,7 +99,7 @@ export default function Home() {
           </div>
         </div>
         <div className="w-full">
-          <div className="flex flex-col items-center gap-4">
+          <div className="flex flex-col items-center gap-4 mt-4">
             <FaqItem
               question="¿Qué muestra el gráfico de Protección de Datos?"
               answer="El gráfico de Protección de Datos muestra el porcentaje de cumplimiento en relación con las normativas actuales de protección de datos. Te ayuda a entender qué tan bien está gestionando tu empresa la seguridad y el manejo de la información personal."
@@ -128,7 +128,7 @@ export default function Home() {
 
 function FaqItem({ question, answer }) {
   return (
-    <div className="border border-gray-200 shadow p-5 rounded-lg w-3/4">
+    <div className="border border-gray-200 shadow p-5 rounded-lg w-4/4">
       <h3 className="font-semibold">{question}</h3>
       <p className="mt-2 ml-7">{answer}</p>
     </div>
