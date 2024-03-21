@@ -2,7 +2,7 @@ import React from "react";
 import { MdOutlineArrowCircleLeft } from "react-icons/md";
 import Link from "next/link";
 
-export default function TicketView({ ticket }) {
+export default function TicketView() {
     return (
         <>
             <div className="pl-16 pr-16 py-7 flex flex-col justify-start items-center gap-5 min-h-[83vh]">
