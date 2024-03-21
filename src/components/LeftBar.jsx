@@ -119,7 +119,7 @@ const LeftBar = () => {
                            <div>
                               <div className="mx-4 my-2">
                                  <Link
-                                    href="/"
+                                    href="/app/"
                                     className="text-black font-light flex items-center justify-start flex-row gap-2 py-1 px-3 w-fit hover:bg-gray-200 duration-300 rounded-lg"
                                  >
                                     <MdHome className="text-mainColor" />
@@ -128,7 +128,7 @@ const LeftBar = () => {
                               </div>
                               <div className="mx-4">
                                  <Link
-                                    href="/ndocs"
+                                    href="/app/ndocs"
                                     className="text-black font-light flex items-center justify-start flex-row gap-2 py-1 px-3 w-fit hover:bg-gray-200 duration-300 rounded-lg"
                                  >
                                     <MdFileOpen className="text-mainColor" />
@@ -168,7 +168,7 @@ const LeftBar = () => {
                               <div>
                                  <div className="mx-4 my-2">
                                     <Link
-                                       href="/docs"
+                                       href="/app/docs"
                                        className="text-black font-light flex items-center justify-start flex-row gap-2 py-1 px-3 w-fit hover:bg-gray-200 duration-300 rounded-lg"
                                     >
                                        <MdShield className="text-mainColor" />
@@ -179,7 +179,7 @@ const LeftBar = () => {
                                  </div>
                                  <div className="mx-4 my-2">
                                     <Link
-                                       href="/ndocs"
+                                       href="/app/ndocs"
                                        className="text-black font-light flex items-center justify-start flex-row gap-2 py-1 px-3 w-fit hover:bg-gray-200 duration-300 rounded-lg"
                                     >
                                        <MdGroups2 className="text-mainColor" />
@@ -190,7 +190,7 @@ const LeftBar = () => {
                                  </div>
                                  <div className="mx-4 my-2">
                                     <Link
-                                       href="/ndocs"
+                                       href="/app/ndocs"
                                        className="text-black font-light flex items-center justify-start flex-row gap-2 py-1 px-3 w-fit hover:bg-gray-200 duration-300 rounded-lg"
                                     >
                                        <MdOutlineTransgender className="text-mainColor" />
@@ -199,7 +199,7 @@ const LeftBar = () => {
                                  </div>
                                  <div className="mx-4 my-2">
                                     <Link
-                                       href="/ndocs"
+                                       href="/app/ndocs"
                                        className="text-black font-light flex items-center justify-start flex-row gap-2 py-1 px-3 w-fit hover:bg-gray-200 duration-300 rounded-lg"
                                     >
                                        <MdSpatialAudioOff className="text-mainColor" />
@@ -349,7 +349,7 @@ const LeftBar = () => {
                               </div>
                               <div className="mx-4 my-2">
                                  <Link
-                                    href="/tareas"
+                                    href="/app/tareas"
                                     className="text-black font-light flex items-center justify-start flex-row gap-2 py-1 px-3 w-fit hover:bg-gray-200 duration-300 rounded-lg"
                                  >
                                     <MdOutlineAddTask className="text-mainColor" />
@@ -397,7 +397,7 @@ const LeftBar = () => {
                         {isSeguimientoCumplimiento && (
                            <div className="mx-4 my-2">
                               <Link
-                                 href="/acc"
+                                 href="/app/acc"
                                  className="text-black font-light flex items-center justify-start flex-row gap-2 py-1 px-3 w-fit hover:bg-gray-200 duration-300 rounded-lg"
                               >
                                  <MdSupervisedUserCircle className="text-mainColor" />
@@ -411,7 +411,7 @@ const LeftBar = () => {
                         <div className="flex items-center justify-between gap-1 w-full px-3">
                            <div className="flex justify-center items-center gap-2">
                               <Link
-                                 href="/alta"
+                                 href="/app/alta"
                                  className="text-black font-normal flex items-center justify-start flex-row gap-2 py-1  w-fit rounded-lg"
                               >
                                  <MdAddCircle className="text-mainColor" />

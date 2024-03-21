@@ -15,13 +15,13 @@ const Footer = () => {
                />
             </div>
             <div className="flex items-center justify-center gap-4">
-               <Link href="/aviso-legal" className="font-light">
+               <Link href="/app/aviso-legal" className="font-light">
                   Aviso Legal
                </Link>
             </div>
             <div className="flex items-center justify-end gap-3">
                <Link
-                  href="/normas-uso-archivo-documentos"
+                  href="/app/normas-uso-archivo-documentos"
                   className="font-light"
                >
                   Normas de uso de archivo de documentos

@@ -6,6 +6,15 @@ const nextConfig = {
         config.resolve.alias['@'] = path.resolve(__dirname, 'src');
         return config;
     },
+    async redirects() {
+        return [
+            {
+                source: '/',
+                destination: '/app',
+                permanent: true,
+            },
+        ];
+    },
 };
 
 module.exports = nextConfig;

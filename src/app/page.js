@@ -1,9 +1,3 @@
-import React from 'react';
-
-function Main_page() {
-  return (
-    <div>Main page</div>
-  );
+export default function Page() {
+  return null;
 }
-
-export default Main_page;

@@ -61,7 +61,7 @@ const CustomModal = ({ isOpen, onRequestClose }) => {
                      Llamar a mi gestor personal
                   </Link>
                   <Link
-                     href="/tickets"
+                     href="/app/tickets"
                      className="bg-mainColor2 hover:bg-mainColor3 text-white
                      font-bold py-2 px-4 rounded focus:outline-none
                      focus:shadow-outline flex items-center gap-2 transition
