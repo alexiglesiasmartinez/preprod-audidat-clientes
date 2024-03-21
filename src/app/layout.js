@@ -1,9 +1,8 @@
 import { Inter } from 'next/font/google';
 import './globals.css';
-import Header from "@/components/Header";
 
-import LeftBar from "@/components/LeftBar";
-import RightBar from "@/components/RightBar";
+import { ClerkProvider } from '@clerk/nextjs';
+import { esES } from "@clerk/localizations";
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -13,18 +12,14 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
+
   return (
-    <html lang="en">
-      <body className={`${inter.className}`}>
-        <Header />
-        <div className='flex bg-white top-14'>
-          <LeftBar />
-          <main className="toHide_main flex-1 p-2 ml-[17%] mr-[17%] mt-[5.5rem]">
-            {children}
-          </main>
-          <RightBar />
-        </div>
-      </body >
-    </html >
+    <ClerkProvider localization={esES}>
+      <html lang="en">
+        <body className={`${inter.className}`}>
+          {children}
+        </body >
+      </html >
+    </ClerkProvider>
   );
 }

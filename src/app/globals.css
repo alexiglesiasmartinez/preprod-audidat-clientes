@@ -40,3 +40,11 @@
    scrollbar-width: thin;
    scrollbar-color: #a0a0a0 transparent;
 }
+
+.cl-userButtonPopoverFooter {
+   display: none;
+}
+
+.cl-internal-b3fm6y {
+   display: none;
+}

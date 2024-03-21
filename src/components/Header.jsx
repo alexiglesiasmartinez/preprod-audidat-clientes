@@ -6,6 +6,7 @@ import Link from "next/link";
 import dynamic from "next/dynamic";
 const Tour = dynamic(() => import("reactour"), { ssr: false });
 import CustomModal from "@/components/PopupSolicitaAuditoria";
+import { UserButton } from "@clerk/nextjs";
 
 import {
    MdOutlineNotificationsNone,
@@ -152,12 +153,15 @@ const Header = () => {
                                  José Ramos
                               </span>
                            </div>
-                           <div
+                           <div>
+                              <UserButton />
+                           </div>
+                           {/*<div
                               className="rounded-full bg-mainGradient w-fit text-mainColor p-2 cursor-pointer"
                               onClick={toggleDropdown}
                            >
                               <MdPersonOutline className="text-2xl text-white" />
-                           </div>
+                           </div>*/}
                         </div>
                      </div>
 
