@@ -12,7 +12,7 @@ export default function TicketView() {
                 </Link>
                 <div className="w-4/6">
                     <div className="bg-white shadow-md rounded-2xl px-8 pt-6 pb-8 mb-4">
-                        <h2 className="text-lg font-bold mb-4">Ticket #1</h2>
+                        <h2 className="text-lg font-bold mb-4">Ticket 1</h2>
                         <div className="mb-4">
                             <label className="block text-black text-sm font-bold mb-2">Nombre:</label>
                             <p className="bg-gray-100 rounded w-full py-2 px-3 text-black">Alex Iglesias</p>
