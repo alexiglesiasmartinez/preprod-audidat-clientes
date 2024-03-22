@@ -153,7 +153,10 @@ const Header = () => {
                         <div className="flex justify-center items-center gap-4">
                            <div className="flex flex-col w-fit">
                               <span className="text-base font-light">
-                                 {isLoaded && user && user.fullName}
+                                 {isLoaded &&
+                                    user &&
+                                    (user.fullName ||
+                                       user.primaryEmailAddress.emailAddress)}
                               </span>
                            </div>
                            <div>
