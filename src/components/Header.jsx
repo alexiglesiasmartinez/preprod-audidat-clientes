@@ -7,6 +7,7 @@ import dynamic from "next/dynamic";
 const Tour = dynamic(() => import("reactour"), { ssr: false });
 import CustomModal from "@/components/PopupSolicitaAuditoria";
 import { UserButton } from "@clerk/nextjs";
+import { useUser } from "@clerk/nextjs";
 
 import {
    MdOutlineNotificationsNone,
@@ -86,6 +87,8 @@ const Header = () => {
       }
    };
 
+   const { user, isLoaded } = useUser();
+
    return (
       <>
          <Tour
@@ -150,7 +153,7 @@ const Header = () => {
                         <div className="flex justify-center items-center gap-4">
                            <div className="flex flex-col w-fit">
                               <span className="text-base font-light">
-                                 José Ramos
+                                 {user.fullName}
                               </span>
                            </div>
                            <div>
