@@ -26,7 +26,7 @@ export default function AudidatCumple_1_cuestionario() {
                 </div>
                 <h3 className="text-lg font-bold">PROGRAMA DE CUMPLIMIENTO NORMATIVO</h3>
                 <h1 className="text-2xl font-bold">AUDIDAT CUMPLE</h1>
-                <h3 className="text-lg font-bold">LOGRO DE CUMPLIMIENTO NORMATIVO N.º 1</h3>
+                <h3 className="text-lg font-bold">LOGRO DE CUMPLIMIENTO NORMATIVO Nº 1</h3>
                 <h4 className="text-base font-bold">POLÍTICA DE PROTECCIÓN DE DATOS</h4>
                 <Image src="/logo_completo.png" width={150} height={150} alt="doc" />
 
