@@ -15,6 +15,20 @@ const nextConfig = {
             },
         ];
     },
+    async headers() {
+        return [
+            {
+                // Applies to all routes
+                source: "/:path*",
+                headers: [
+                    {
+                        key: "Cache-Control",
+                        value: "no-store, max-age=0"
+                    },
+                ],
+            },
+        ];
+    },
 };
 
 module.exports = nextConfig;

@@ -5,11 +5,6 @@ export async function middleware(request) {
 
   const { pathname } = request.nextUrl;
 
-  // Create a response object early so we can modify headers as needed in various conditions
-  const response = NextResponse.next();
-  // Set cache-control header to prevent caching
-  response.headers.set('Cache-Control', 'no-store, max-age=0');
-
   try {
     const tokenObject = request.cookies.get('auth-token');
 
@@ -23,7 +18,7 @@ export async function middleware(request) {
         return NextResponse.redirect(new URL('/app', request.url));
       }
 
-      return response;
+      return NextResponse.next();
     }
     else {
       if (pathname.startsWith('/app')) {
@@ -39,10 +34,10 @@ export async function middleware(request) {
   }
 
   if (pathname === '/login') {
-    return response;
+    return NextResponse.next();
   }
 
-  return response;
+  return NextResponse.next();
 }
 
 export const config = {
