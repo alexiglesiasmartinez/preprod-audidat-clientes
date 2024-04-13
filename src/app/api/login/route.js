@@ -11,7 +11,7 @@ export async function POST(request) {
             userId: 1,
             email: email,
             name: 'Alex',
-            lastName: 'Iglesias'
+            lastName: 'Iglesias Martínez'
          },
             process.env.JWT_SECRET,
             { expiresIn: '1h' }
