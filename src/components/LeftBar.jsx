@@ -88,6 +88,7 @@ const LeftBar = () => {
                                  <Link
                                     href="/app/"
                                     className="text-black font-light flex items-center justify-start flex-row gap-2 py-1 px-3 w-fit hover:bg-gray-200 duration-300 rounded-lg"
+                                    prefetch={false}
                                  >
                                     <MdHome className="text-mainColor" />
                                     <span className="text-sm">Inicio</span>{" "}
@@ -97,6 +98,7 @@ const LeftBar = () => {
                                  <Link
                                     href="/app/ndocs"
                                     className="text-black font-light flex items-center justify-start flex-row gap-2 py-1 px-3 w-fit hover:bg-gray-200 duration-300 rounded-lg"
+                                    prefetch={false}
                                  >
                                     <MdFileOpen className="text-mainColor" />
                                     <span className="text-sm">
@@ -137,6 +139,7 @@ const LeftBar = () => {
                                     <Link
                                        href="/app/docs"
                                        className="text-black font-light flex items-center justify-start flex-row gap-2 py-1 px-3 w-fit hover:bg-gray-200 duration-300 rounded-lg"
+                                       prefetch={false}
                                     >
                                        <MdShield className="text-mainColor" />
                                        <span className="text-sm ">
@@ -159,6 +162,7 @@ const LeftBar = () => {
                                     <Link
                                        href="/app/ndocs"
                                        className="text-black font-light flex items-center justify-start flex-row gap-2 py-1 px-3 w-fit hover:bg-gray-200 duration-300 rounded-lg"
+                                       prefetch={false}
                                     >
                                        <MdOutlineTransgender className="text-mainColor" />
                                        <span className="text-sm">Igualdad</span>{" "}
@@ -168,6 +172,7 @@ const LeftBar = () => {
                                     <Link
                                        href="/app/ndocs"
                                        className="text-black font-light flex items-center justify-start flex-row gap-2 py-1 px-3 w-fit hover:bg-gray-200 duration-300 rounded-lg"
+                                       prefetch={false}
                                     >
                                        <MdSpatialAudioOff className="text-mainColor" />
                                        <span className="text-sm">
@@ -207,6 +212,7 @@ const LeftBar = () => {
                                  <Link
                                     href="#"
                                     className="text-black font-light flex items-center justify-start flex-row gap-2 py-1 px-3 w-fit hover:bg-gray-200 duration-300 rounded-lg"
+                                    prefetch={false}
                                  >
                                     <MdFileOpen className="text-mainColor" />
                                     <span className="text-sm ">
@@ -218,6 +224,7 @@ const LeftBar = () => {
                                  <Link
                                     href="#"
                                     className="text-black font-light flex items-center justify-start flex-row gap-2 py-1 px-3 w-fit hover:bg-gray-200 duration-300 rounded-lg"
+                                    prefetch={false}
                                  >
                                     <MdLightbulb className="text-mainColor" />
                                     <span className="text-sm">
@@ -256,6 +263,7 @@ const LeftBar = () => {
                                  <Link
                                     href="#"
                                     className="text-black font-light flex items-center justify-start flex-row gap-2 py-1 px-3 w-fit hover:bg-gray-200 duration-300 rounded-lg"
+                                    prefetch={false}
                                  >
                                     <MdFileOpen className="text-mainColor" />
                                     <span className="text-sm ">
@@ -267,6 +275,7 @@ const LeftBar = () => {
                                  <Link
                                     href="#"
                                     className="text-black font-light flex items-center justify-start flex-row gap-2 py-1 px-3 w-fit hover:bg-gray-200 duration-300 rounded-lg"
+                                    prefetch={false}
                                  >
                                     <MdLightbulb className="text-mainColor" />
                                     <span className="text-sm">
@@ -307,6 +316,7 @@ const LeftBar = () => {
                                  <Link
                                     href="#"
                                     className="text-black font-light flex items-center justify-start flex-row gap-2 py-1 px-3 w-fit hover:bg-gray-200 duration-300 rounded-lg"
+                                    prefetch={false}
                                  >
                                     <MdOutlineDraw className="text-mainColor" />
                                     <span className="text-sm">
@@ -318,6 +328,7 @@ const LeftBar = () => {
                                  <Link
                                     href="/app/tareas"
                                     className="text-black font-light flex items-center justify-start flex-row gap-2 py-1 px-3 w-fit hover:bg-gray-200 duration-300 rounded-lg"
+                                    prefetch={false}
                                  >
                                     <MdOutlineAddTask className="text-mainColor" />
                                     <span className="text-sm">Tareas</span>{" "}
@@ -327,6 +338,7 @@ const LeftBar = () => {
                                  <Link
                                     href="#"
                                     className="text-black font-light flex items-center justify-start flex-row gap-2 py-1 px-3 w-fit hover:bg-gray-200 duration-300 rounded-lg"
+                                    prefetch={false}
                                  >
                                     <MdCookie className="text-mainColor" />
                                     <span className="text-sm">
@@ -366,6 +378,7 @@ const LeftBar = () => {
                               <Link
                                  href="/app/acc"
                                  className="text-black font-light flex items-center justify-start flex-row gap-2 py-1 px-3 w-fit hover:bg-gray-200 duration-300 rounded-lg"
+                                 prefetch={false}
                               >
                                  <MdSupervisedUserCircle className="text-mainColor" />
                                  <span className="text-sm">Audidat CUMPLE</span>{" "}
@@ -380,6 +393,7 @@ const LeftBar = () => {
                               <Link
                                  href="/app/alta"
                                  className="text-black font-normal flex items-center justify-start flex-row gap-2 py-1  w-fit rounded-lg"
+                                 prefetch={false}
                               >
                                  <MdAddCircle className="text-mainColor" />
                                  <span className="text-sm mb-1 text-black">

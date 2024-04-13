@@ -76,7 +76,7 @@ const RightBar = () => {
                                     isOpen={modalIsOpen2}
                                     onRequestClose={closeModal2}
                                  />
-                                 <Link href="/app/tickets">
+                                 <Link href="/app/tickets" prefetch={false}>
                                     <div
                                        className="flex flex-col justify-center items-center text-center bg-mainGradient text-white rounded-full p-2"
                                        onClick={openModal3}

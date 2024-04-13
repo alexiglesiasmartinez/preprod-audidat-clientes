@@ -86,7 +86,7 @@ const Header = () => {
          <header className="fixed flex items-center bg-gray-50 text-mainColor text-center top-10 left-0 h-14 w-full z-20 py-2 px-5 shadow">
             <div className="grid grid-cols-2 align-middle w-full">
                <div className="flex items-center gap-3">
-                  <Link href="/app/">
+                  <Link href="/app/" prefetch={false}>
                      <Image
                         src={logo}
                         width={130}
@@ -100,17 +100,17 @@ const Header = () => {
                      onClick={changeLogo}
                      className="transition transform hover:scale-125"
                   >
-                     <Link href="#">
+                     <Link href="#" prefetch={false}>
                         <MdArrowOutward size={20} />
                      </Link>
                   </div>
                   <div className="transition transform hover:scale-125">
-                     <Link href="#">
+                     <Link href="#" prefetch={false}>
                         <MdOutlineMessage size={20} />
                      </Link>
                   </div>
                   <div className="transition transform hover:scale-125">
-                     <Link href="#" onClick={openModal}>
+                     <Link href="#" onClick={openModal} prefetch={false}>
                         <MdOutlineNotificationsNone size={20} />
                      </Link>
                      <CustomModal
@@ -146,6 +146,7 @@ const Header = () => {
                               <Link
                                  href="/app/perfil/configuracion"
                                  className="rounded-lg"
+                                 prefetch={false}
                               >
                                  <span className="block px-4 py-2 text-gray-800 hover:bg-gray-100 rounded-t-lg">
                                     <MdOutlineSettings
@@ -156,7 +157,7 @@ const Header = () => {
                                  </span>
                               </Link>
                            </div>
-                           <Link href="/app/perfil/datos">
+                           <Link href="/app/perfil/datos" prefetch={false}>
                               <span className="block px-4 py-2 text-gray-800 hover:bg-gray-100">
                                  <MdPersonOutline
                                     size={20}
@@ -165,7 +166,7 @@ const Header = () => {
                                  Perfil
                               </span>
                            </Link>
-                           <Link href="/app/perfil/ayuda">
+                           <Link href="/app/perfil/ayuda" prefetch={false}>
                               <span className="block px-4 py-2 text-gray-800 hover:bg-gray-100">
                                  <MdHelpOutline
                                     size={20}

@@ -77,7 +77,7 @@ export default function LoginPage() {
                               className="py-2 px-4 border border-mainColor text-white rounded-lg focus:outline-none focus:border-gray-600 bg-mainGradient uppercase font-bold w-full">
                               <span className="text-left">Iniciar sesión</span>
                            </button>
-                           <Link className="mt-4 text-gray-500 text-sm font-light hover:underline text-center w-full" href="/app">¿Has olvidado tu contraseña?</Link>
+                           <Link className="mt-4 text-gray-500 text-sm font-light hover:underline text-center w-full" href="/app" prefetch={false}>¿Has olvidado tu contraseña?</Link>
                         </form>
                      </>
                   )}
