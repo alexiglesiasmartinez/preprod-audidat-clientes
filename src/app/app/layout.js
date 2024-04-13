@@ -11,17 +11,15 @@ export const metadata = {
 export default function RootLayout({ children }) {
 
     return (
-        <html lang="en">
-            <body>
-                <Header />
-                <div className='flex bg-white top-14'>
-                    <LeftBar />
-                    <main className="toHide_main flex-1 p-2 ml-[17%] mr-[17%] mt-[5.5rem]">
-                        {children}
-                    </main>
-                    <RightBar />
-                </div>
-            </body>
-        </html >
+        <>
+            <Header />
+            <div className='flex bg-white top-14'>
+                <LeftBar />
+                <main className="toHide_main flex-1 p-2 ml-[17%] mr-[17%] mt-[5.5rem]">
+                    {children}
+                </main>
+                <RightBar />
+            </div>
+        </>
     );
 }

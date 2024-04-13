@@ -1,13 +1,11 @@
 "use client";
 
 import React, { useState, useRef, useEffect } from "react";
+import { useRouter } from 'next/navigation';
 import Image from "next/image";
 import Link from "next/link";
-import dynamic from "next/dynamic";
-const Tour = dynamic(() => import("reactour"), { ssr: false });
 import CustomModal from "@/components/PopupSolicitaAuditoria";
-import { UserButton } from "@clerk/nextjs";
-import { useUser } from "@clerk/nextjs";
+import toast, { Toaster } from 'react-hot-toast';
 
 import {
    MdOutlineNotificationsNone,
@@ -20,46 +18,34 @@ import {
 } from "react-icons/md";
 
 const Header = () => {
-   const [dropdownVisible, setDropdownVisible] = useState(false);
-   const dropdownRef = useRef(null);
 
-   const [isTourOpen, setIsTourOpen] = useState(true);
-
+   // LOGOUT
+   const router = useRouter();
+   async function handleLogout() {
+      const response = await fetch('/api/logout');
+      const data = await response.json();    
+      if (data.success) {
+         toast.success('¡Has cerrado sesión correctamente!');
+         router.push('/login');
+      }
+    }
+   
+   // MODAL
    const [modalIsOpen, setModalIsOpen] = useState(false);
    const openModal = () => setModalIsOpen(true);
    const closeModal = () => setModalIsOpen(false);
 
-   useEffect(() => {
-      if (window.location.pathname === "/") {
-         setIsTourOpen(true);
-         setDropdownVisible(true);
-      }
-      return () => setIsTourOpen(false);
-   }, []);
-
-   const steps = [
-      {
-         selector: ".div1",
-         content:
-            "Haz click en Configuración para configurar los avisos de tu proceso de cumplimiento.",
-      },
-   ];
-
-   const handleDiv1Click = () => {
-      setIsTourOpen(false);
-      setDropdownVisible(false);
-   };
-
+   // DESPLEGABLE MENÚ
+   const [dropdownVisible, setDropdownVisible] = useState(false);
+   const dropdownRef = useRef(null);
    const toggleDropdown = () => {
       setDropdownVisible(!dropdownVisible);
    };
-
    const handleClickOutside = (event) => {
       if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
          setDropdownVisible(false);
       }
    };
-
    useEffect(() => {
       document.addEventListener("mousedown", handleClickOutside);
       return () => {
@@ -67,11 +53,10 @@ const Header = () => {
       };
    }, []);
 
+   // CAMBIO DE LOGO
    const [logo, setLogo] = useState("/logo-audidat-clientes.png");
-
    const changeLogo = () => {
       const root = document.documentElement;
-
       if (logo === "/logo-eurocajarural.jpeg") {
          setLogo("/logo-audidat-clientes.png");
          root.style.setProperty("--mainGradient", "#00375e");
@@ -87,30 +72,18 @@ const Header = () => {
       }
    };
 
-   const { user, isLoaded } = useUser();
-
    return (
       <>
-         <Tour
-            steps={steps}
-            isOpen={isTourOpen}
-            onRequestClose={() => setIsTourOpen(false)}
-            accentColor="#00375e"
-            rounded={5}
-            showButtons={false}
-            showNavigation={false}
-         />
-         <div className="toHide fixed flex items-center justify-center bg-gray-50 text-mainColor text-center top-0 left-0 h-10 w-full z-20 py-2 px-5 shadow bg-mainColor">
+         <Toaster />
+         <div className="fixed flex items-center justify-center bg-gray-50 text-mainColor text-center top-0 left-0 h-10 w-full z-20 py-2 px-5 shadow bg-mainColor">
             <div className="flex gap-2 justify-center items-center text-white">
                <MdOutlineMessage size={20} />
                <span className="flex justify-center items-center text-base text-white font-light">
-                  Recuerda revisar y actualizar regularmente tus políticas de
-                  privacidad para garantizar el pleno cumplimiento con el RGPD y
-                  la protección óptima de los datos personales.
+                  Recuerda revisar y actualizar regularmente tus políticas de privacidad para garantizar el pleno cumplimiento con el RGPD y la protección óptima de los datos personales.
                </span>
             </div>
          </div>
-         <header className="toHide fixed flex items-center bg-gray-50 text-mainColor text-center top-10 left-0 h-14 w-full z-20 py-2 px-5 shadow">
+         <header className="fixed flex items-center bg-gray-50 text-mainColor text-center top-10 left-0 h-14 w-full z-20 py-2 px-5 shadow">
             <div className="grid grid-cols-2 align-middle w-full">
                <div className="flex items-center gap-3">
                   <Link href="/app/">
@@ -153,21 +126,23 @@ const Header = () => {
                         <div className="flex justify-center items-center gap-4">
                            <div className="flex flex-col w-fit">
                               <span className="text-base font-light">
-                                 {isLoaded &&
-                                    user &&
-                                    (user.fullName ||
-                                       user.primaryEmailAddress.emailAddress)}
+                                 Alex Iglesias
                               </span>
                            </div>
-                           <div>
-                              <UserButton afterSignOutUrl="/app" />
+                           <div onClick={toggleDropdown} className="cursor-pointer">                              
+                              <Image
+                                 src="/profile.png"
+                                 width={32}
+                                 height={32}
+                                 alt="Profile image"
+                              />
                            </div>
                         </div>
                      </div>
 
                      {dropdownVisible && (
                         <div className="text-left text-sm absolute right-5 mt-14 w-48 bg-white rounded-lg shadow-xl z-20">
-                           <div onClick={handleDiv1Click} className="div1">
+                           <div className="div1">
                               <Link
                                  href="/app/perfil/configuracion"
                                  className="rounded-lg"
@@ -199,12 +174,12 @@ const Header = () => {
                                  Ayuda
                               </span>
                            </Link>
-                           <Link href="#">
+                           <div className="cursor-pointer" onClick={handleLogout}>
                               <span className="block px-4 py-2 text-gray-800 hover:bg-gray-100 rounded-">
                                  <MdLogout size={20} className="inline mr-2" />
                                  Cerrar Sesión
                               </span>
-                           </Link>
+                           </div>
                         </div>
                      )}
                   </div>

@@ -27,8 +27,6 @@ import {
    MdAddCircle,
 } from "react-icons/md";
 import CustomModal from "@/components/PopupInvitaEmpresa";
-import dynamic from "next/dynamic";
-const Tour = dynamic(() => import("reactour"), { ssr: false });
 
 const LeftBar = () => {
    const [visible, setVisible] = useState(true);
@@ -46,39 +44,8 @@ const LeftBar = () => {
    const [isSeguimientoCumplimiento, setIsSeguimientoCumplimiento] =
       useState(false);
 
-   /*const [isTourOpen, setIsTourOpen] = useState(true);
-
-   useEffect(() => {
-      if (window.location.pathname === "/ndocs") {
-         setIsTourOpen(true);
-         setIsOpenAudidat360(true);
-      }
-      return () => setIsTourOpen(false);
-   }, []);
-
-   const steps = [
-      {
-         selector: ".div6",
-         content:
-            "Aquí puedes ver tu sección para acceder a tu documentación. Haz click en Protección de Datos para comenzar a mejorar tu cumplimiento normativo.",
-      },
-   ];
-
-   const handleDiv6Click = () => {
-      setIsTourOpen(false);
-   };*/
-
    return (
       <>
-         {/*<Tour
-            steps={steps}
-            isOpen={isTourOpen}
-            onRequestClose={() => setIsTourOpen(false)}
-            accentColor="#00375e"
-            rounded={5}
-            showButtons={false}
-            showNavigation={false}
-         />*/}
          {visible ? (
             <aside className="toHide fixed top-20 pt-10 pb-32 left-0 w-[17%] h-screen bg-gray-50 text-white p-4 z-10 shadow-2xl flex flex-col justify-between">
                <div className="flex-1 overflow-auto">

@@ -47,6 +47,7 @@ const CustomModal = ({ isOpen, onRequestClose }) => {
                   src="/popupContactaGestorPersonal.png"
                   width={150}
                   height={150}
+                  alt="Contacta a tu gestor personal"
                />
                <div className="flex items-center justify-center gap-4">
                   <Link

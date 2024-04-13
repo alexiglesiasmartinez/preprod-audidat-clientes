@@ -14,8 +14,6 @@ import {
 import CustomModal from "@/components/PopupSolicitaAuditoria";
 import PopupContactaGestorPersonalLlamada from "@/components/PopupContactaGestorPersonalLlamada";
 import Link from "next/link";
-import dynamic from "next/dynamic";
-const Tour = dynamic(() => import("reactour"), { ssr: false });
 
 const RightBar = () => {
    const [visible, setVisible] = useState(true);
@@ -33,23 +31,6 @@ const RightBar = () => {
    const [modalIsOpen3, setModalIsOpen3] = useState(false);
    const openModal3 = () => setModalIsOpen3(true);
    const closeModal3 = () => setModalIsOpen3(false);
-
-   const [isTourOpen, setIsTourOpen] = useState(true);
-
-   useEffect(() => {
-      if (window.location.pathname === "/") {
-         setIsTourOpen(true);
-      }
-      return () => setIsTourOpen(false);
-   }, []);
-
-   const steps = [
-      {
-         selector: ".div1",
-         content:
-            "Haz click en Configuración para configurar los avisos de tu proceso de cumplimiento.",
-      },
-   ];
 
    return (
       <>
@@ -70,6 +51,7 @@ const RightBar = () => {
                                     width={50}
                                     height={50}
                                     className="text-black"
+                                    alt="Asesor personal Audidat"
                                  />
                                  <div className="flex flex-col gap-1">
                                     <p className="text-base font-semibold text-black">
